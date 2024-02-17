@@ -20,20 +20,20 @@ router.get('/cards', (req, res) => {
   const matchingCards = getCardsByTags(tagsArray);
 
   if (matchingCards.length > 0) {
-   res.json(matchingCards);
+   res.status(200).res.json(matchingCards);
   } else {
    res.status(404).json({ message: 'Aucune fiche trouvée avec ces tags' });
   }
  } else {
   const cards = getAllCards();
-  res.json(cards);
+  res.status(200).res.json(cards);
  }
 });
 
 router.get('/cards/:id', (req, res) => {
  const card = getCardById(parseInt(req.params.id));
  if (card) {
-  res.json(card);
+  res.status(200).res.json(card);
  } else {
   res.status(404).json({ message: 'Carte non trouvée' });
  }
@@ -41,9 +41,11 @@ router.get('/cards/:id', (req, res) => {
 
 router.post('/cards', (req, res) => {
  const newCard = req.body;
- console.log(newCard);
- createCard(newCard);
- res.status(201).json(newCard);
+ if(createCard(newCard)){
+  res.status(201).json(newCard);
+ }else{
+  res.status(400).json({ message: 'Erreur lors de la création de la carte' });
+ }
 });
 
 router.patch('/cards/:id', (req, res) => {
@@ -51,7 +53,7 @@ router.patch('/cards/:id', (req, res) => {
  const updatedCard = req.body;
  const success = updateCard(id, updatedCard);
  if (success) {
-  res.json({ message: 'Carte mise à jour avec succès' });
+  res.status(200).res.json({ message: 'Carte mise à jour avec succès' });
  } else {
   res.status(404).json({ message: 'Carte non trouvée' });
  }
@@ -61,7 +63,7 @@ router.delete('/cards/:id', (req, res) => {
  const id = parseInt(req.params.id);
  const success = deleteCard(id);
  if (success) {
-  res.json({ message: 'Carte supprimée avec succès' });
+  res.status(200).res.json({ message: 'Carte supprimée avec succès' });
  } else {
   res.status(404).json({ message: 'Carte non trouvée' });
  }
