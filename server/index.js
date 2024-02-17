@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const ficheRoutes = require('./Routes/ficheRoutes');
+const ficheRoutes = require('./Routes/CardRoutes');
 app.use('/', ficheRoutes);
 
 // Démarrer le serveur
