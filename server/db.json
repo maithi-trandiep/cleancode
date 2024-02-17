@@ -1,0 +1,1250 @@
+{
+  "cards": {
+    "1": {
+      "id": "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
+      "question": "France",
+      "answer": "LA",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "2": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d1",
+      "question": "Spain",
+      "answer": "Madrid",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "3": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d2",
+      "question": "Germany",
+      "answer": "Berlin",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "4": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d3",
+      "question": "Italy",
+      "answer": "Rome",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "5": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d4",
+      "question": "Portugal",
+      "answer": "Lisbon",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "6": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d5",
+      "question": "Netherlands",
+      "answer": "Amsterdam",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "7": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d6",
+      "question": "Belgium",
+      "answer": "Brussels",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "8": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d7",
+      "question": "Austria",
+      "answer": "Vienna",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "9": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d8",
+      "question": "Switzerland",
+      "answer": "Bern",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "10": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d9",
+      "question": "Sweden",
+      "answer": "Stockholm",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "11": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d10",
+      "question": "Norway",
+      "answer": "Oslo",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "12": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d11",
+      "question": "Denmark",
+      "answer": "Copenhagen",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "13": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d12",
+      "question": "Finland",
+      "answer": "Helsinki",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "14": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d13",
+      "question": "Ireland",
+      "answer": "Dublin",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "15": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d14",
+      "question": "United Kingdom",
+      "answer": "London",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "16": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d15",
+      "question": "Greece",
+      "answer": "Athens",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "17": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d16",
+      "question": "Turkey",
+      "answer": "Ankara",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "18": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d17",
+      "question": "Poland",
+      "answer": "Warsaw",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "19": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d18",
+      "question": "Czech Republic",
+      "answer": "Prague",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "20": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d19",
+      "question": "Slovakia",
+      "answer": "Bratislava",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "21": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d20",
+      "question": "Hungary",
+      "answer": "Budapest",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "22": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d21",
+      "question": "Romania",
+      "answer": "Bucharest",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "23": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d22",
+      "question": "Bulgaria",
+      "answer": "Sofia",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "24": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d23",
+      "question": "Serbia",
+      "answer": "Belgrade",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "25": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d24",
+      "question": "Croatia",
+      "answer": "Zagreb",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "26": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d25",
+      "question": "Bosnia and Herzegovina",
+      "answer": "Sarajevo",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "27": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d26",
+      "question": "Montenegro",
+      "answer": "Podgorica",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "28": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d27",
+      "question": "Albania",
+      "answer": "Tirana",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "29": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d28",
+      "question": "Macedonia",
+      "answer": "Skopje",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "30": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d29",
+      "question": "Kosovo",
+      "answer": "Pristina",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "31": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d30",
+      "question": "Ukraine",
+      "answer": "Kiev",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "32": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d31",
+      "question": "Belarus",
+      "answer": "Minsk",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "33": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d32",
+      "question": "Lithuania",
+      "answer": "Vilnius",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "34": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d33",
+      "question": "Latvia",
+      "answer": "Riga",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "35": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d34",
+      "question": "Estonia",
+      "answer": "Tallinn",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "36": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d35",
+      "question": "Moldova",
+      "answer": "Chisinau",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "37": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d36",
+      "question": "Russia",
+      "answer": "Moscow",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "38": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d37",
+      "question": "Iceland",
+      "answer": "Reykjavik",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "39": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d38",
+      "question": "Greenland",
+      "answer": "Nuuk",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "40": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d39",
+      "question": "Faroe Islands",
+      "answer": "Torshavn",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "41": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d40",
+      "question": "Aland Islands",
+      "answer": "Mariehamn",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "42": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d41",
+      "question": "Andorra",
+      "answer": "Andorra la Vella",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "43": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d42",
+      "question": "Gibraltar",
+      "answer": "Gibraltar",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "44": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d43",
+      "question": "Malta",
+      "answer": "Valletta",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "45": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d44",
+      "question": "Cyprus",
+      "answer": "Nicosia",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "46": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d45",
+      "question": "Luxembourg",
+      "answer": "Luxembourg",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "47": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d46",
+      "question": "Monaco",
+      "answer": "Monaco",
+      "tag": "Europe",
+      "category": "FIRST"
+    },
+    "48": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d47",
+      "question": "Senegal",
+      "answer": "Dakar",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "49": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d48",
+      "question": "Mali",
+      "answer": "Bamako",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "50": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d49",
+      "question": "Niger",
+      "answer": "Niamey",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "51": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d50",
+      "question": "Chad",
+      "answer": "N'Djamena",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "52": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d51",
+      "question": "Sudan",
+      "answer": "Khartoum",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "53": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d52",
+      "question": "Eritrea",
+      "answer": "Asmara",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "54": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d53",
+      "question": "Djibouti",
+      "answer": "Djibouti",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "55": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d54",
+      "question": "Somalia",
+      "answer": "Mogadishu",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "56": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d55",
+      "question": "Uganda",
+      "answer": "Kampala",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "57": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d56",
+      "question": "Rwanda",
+      "answer": "Kigali",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "58": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d57",
+      "question": "Burundi",
+      "answer": "Bujumbura",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "59": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d58",
+      "question": "Tanzania",
+      "answer": "Dodoma",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "60": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d59",
+      "question": "Mozambique",
+      "answer": "Maputo",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "61": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d60",
+      "question": "Zimbabwe",
+      "answer": "Harare",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "62": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d61",
+      "question": "Botswana",
+      "answer": "Gaborone",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "63": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d62",
+      "question": "Namibia",
+      "answer": "Windhoek",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "64": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d63",
+      "question": "Angola",
+      "answer": "Luanda",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "65": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d64",
+      "question": "Zambia",
+      "answer": "Lusaka",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "66": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d65",
+      "question": "Malawi",
+      "answer": "Lilongwe",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "67": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d66",
+      "question": "Lesotho",
+      "answer": "Maseru",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "68": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d67",
+      "question": "Swaziland",
+      "answer": "Mbabane",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "69": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d68",
+      "question": "South Africa",
+      "answer": "Pretoria",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "70": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d69",
+      "question": "Madagascar",
+      "answer": "Antananarivo",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "71": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d70",
+      "question": "Mauritius",
+      "answer": "Port Louis",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "72": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d71",
+      "question": "Seychelles",
+      "answer": "Victoria",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "73": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d72",
+      "question": "Comoros",
+      "answer": "Moroni",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "74": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d73",
+      "question": "Sao Tome and Principe",
+      "answer": "Sao Tome",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "75": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d74",
+      "question": "Cape Verde",
+      "answer": "Praia",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "76": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d75",
+      "question": "Guinea-Bissau",
+      "answer": "Bissau",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "77": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d76",
+      "question": "Gambia",
+      "answer": "Banjul",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "78": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d77",
+      "question": "Guinea",
+      "answer": "Conakry",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "79": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d78",
+      "question": "Sierra Leone",
+      "answer": "Freetown",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "80": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d79",
+      "question": "Liberia",
+      "answer": "Monrovia",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "81": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d80",
+      "question": "Ivory Coast",
+      "answer": "Yamoussoukro",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "82": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d81",
+      "question": "Ghana",
+      "answer": "Accra",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "83": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d82",
+      "question": "Togo",
+      "answer": "Lome",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "84": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d83",
+      "question": "Benin",
+      "answer": "Porto-Novo",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "85": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d84",
+      "question": "Nigeria",
+      "answer": "Abuja",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "86": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d85",
+      "question": "Cameroon",
+      "answer": "Yaounde",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "87": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d86",
+      "question": "Equatorial Guinea",
+      "answer": "Malabo",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "88": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d87",
+      "question": "Gabon",
+      "answer": "Libreville",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "89": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d88",
+      "question": "Congo",
+      "answer": "Brazzaville",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "90": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d89",
+      "question": "Democratic Republic of the Congo",
+      "answer": "Kinshasa",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "91": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d90",
+      "question": "Central African Republic",
+      "answer": "Bangui",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "92": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d91",
+      "question": "South Sudan",
+      "answer": "Juba",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "93": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d92",
+      "question": "Uganda",
+      "answer": "Kampala",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "94": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d93",
+      "question": "Rwanda",
+      "answer": "Kigali",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "95": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d94",
+      "question": "Burundi",
+      "answer": "Bujumbura",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "96": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d95",
+      "question": "Tanzania",
+      "answer": "Dodoma",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "97": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d96",
+      "question": "Mozambique",
+      "answer": "Maputo",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "98": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d97",
+      "question": "Zimbabwe",
+      "answer": "Harare",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "99": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d98",
+      "question": "Algeria",
+      "answer": "Algiers",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "100": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d99",
+      "question": "Libya",
+      "answer": "Tripoli",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "101": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d100",
+      "question": "Egypt",
+      "answer": "Cairo",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "102": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d101",
+      "question": "Morocco",
+      "answer": "Rabat",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "103": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d102",
+      "question": "Tunisia",
+      "answer": "Tunis",
+      "tag": "Africa",
+      "category": "FIRST"
+    },
+    "104": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d103",
+      "question": "India",
+      "answer": "New Delhi",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "105": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d104",
+      "question": "Pakistan",
+      "answer": "Islamabad",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "106": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d105",
+      "question": "Bangladesh",
+      "answer": "Dhaka",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "107": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d106",
+      "question": "Sri Lanka",
+      "answer": "Colombo",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "108": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d107",
+      "question": "Nepal",
+      "answer": "Kathmandu",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "109": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d108",
+      "question": "Bhutan",
+      "answer": "Thimphu",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "110": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d109",
+      "question": "Myanmar",
+      "answer": "Naypyidaw",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "111": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d110",
+      "question": "Thailand",
+      "answer": "Bangkok",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "112": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d111",
+      "question": "Laos",
+      "answer": "Vientiane",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "113": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d112",
+      "question": "Cambodia",
+      "answer": "Phnom Penh",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "114": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d113",
+      "question": "Vietnam",
+      "answer": "Hanoi",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "115": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d114",
+      "question": "Malaysia",
+      "answer": "Kuala Lumpur",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "116": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d115",
+      "question": "Singapore",
+      "answer": "Singapore",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "117": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d116",
+      "question": "Indonesia",
+      "answer": "Jakarta",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "118": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d117",
+      "question": "East Timor",
+      "answer": "Dili",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "119": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d118",
+      "question": "Philippines",
+      "answer": "Manila",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "120": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d119",
+      "question": "Brunei",
+      "answer": "Bandar Seri Begawan",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "121": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d120",
+      "question": "China",
+      "answer": "Beijing",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "122": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d121",
+      "question": "Mongolia",
+      "answer": "Ulaanbaatar",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "123": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d122",
+      "question": "North Korea",
+      "answer": "Pyongyang",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "124": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d123",
+      "question": "South Korea",
+      "answer": "Seoul",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "125": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d124",
+      "question": "Japan",
+      "answer": "Tokyo",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "126": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d125",
+      "question": "Taiwan",
+      "answer": "Taipei",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "127": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d126",
+      "question": "Turkmen",
+      "answer": "Ashgabat",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "128": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d127",
+      "question": "Uzbekistan",
+      "answer": "Tashkent",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "129": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d128",
+      "question": "Kazakhstan",
+      "answer": "Astana",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "130": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d129",
+      "question": "Kyrgyzstan",
+      "answer": "Bishkek",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "131": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d130",
+      "question": "Tajikistan",
+      "answer": "Dushanbe",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "132": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d131",
+      "question": "Afghanistan",
+      "answer": "Kabul",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "133": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d132",
+      "question": "Iran",
+      "answer": "Tehran",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "134": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d133",
+      "question": "Iraq",
+      "answer": "Baghdad",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "135": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d134",
+      "question": "Syria",
+      "answer": "Damascus",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "136": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d135",
+      "question": "Lebanon",
+      "answer": "Beirut",
+      "tag": "Asia",
+      "category": "FIRST"
+    },
+    "137": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d136",
+      "question": "Australia",
+      "answer": "Canberra",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "138": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d137",
+      "question": "New Zealand",
+      "answer": "Wellington",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "139": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d138",
+      "question": "Papua New Guinea",
+      "answer": "Port Moresby",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "140": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d139",
+      "question": "Solomon Islands",
+      "answer": "Honiara",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "141": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d140",
+      "question": "Vanuatu",
+      "answer": "Port Vila",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "142": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d141",
+      "question": "Fiji",
+      "answer": "Suva",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "143": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d142",
+      "question": "Tonga",
+      "answer": "Nuku'alofa",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "144": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d143",
+      "question": "Samoa",
+      "answer": "Apia",
+      "tag": "Oceania",
+      "category": "FIRST"
+    },
+    "145": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d144",
+      "question": "United States",
+      "answer": "Washington D.C.",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "146": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d145",
+      "question": "Canada",
+      "answer": "Ottawa",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "147": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d146",
+      "question": "Mexico",
+      "answer": "Mexico City",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "148": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d147",
+      "question": "Guatemala",
+      "answer": "Guatemala City",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "149": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d148",
+      "question": "Belize",
+      "answer": "Belmopan",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "150": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d149",
+      "question": "El Salvador",
+      "answer": "San Salvador",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "151": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d150",
+      "question": "Honduras",
+      "answer": "Tegucigalpa",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "152": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d151",
+      "question": "Nicaragua",
+      "answer": "Managua",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "153": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d152",
+      "question": "Costa Rica",
+      "answer": "San Jose",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "154": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d153",
+      "question": "Panama",
+      "answer": "Panama City",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "155": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d154",
+      "question": "Cuba",
+      "answer": "Havana",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "156": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d155",
+      "question": "Jamaica",
+      "answer": "Kingston",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "157": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d156",
+      "question": "Haiti",
+      "answer": "Port-au-Prince",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "158": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d157",
+      "question": "Dominican Republic",
+      "answer": "Santo Domingo",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "159": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d158",
+      "question": "Bahamas",
+      "answer": "Nassau",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "160": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d159",
+      "question": "Trinidad and Tobago",
+      "answer": "Port of Spain",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "161": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d160",
+      "question": "Barbados",
+      "answer": "Bridgetown",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "162": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d161",
+      "question": "Saint Lucia",
+      "answer": "Castries",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "163": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d162",
+      "question": "Saint Vincent and the Grenadines",
+      "answer": "Kingstown",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "164": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d163",
+      "question": "Grenada",
+      "answer": "Saint George's",
+      "tag": "North America",
+      "category": "FIRST"
+    },
+    "165": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d164",
+      "question": "Brazil",
+      "answer": "Brasilia",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "166": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d165",
+      "question": "Colombia",
+      "answer": "Bogota",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "167": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d166",
+      "question": "Venezuela",
+      "answer": "Caracas",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "168": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d167",
+      "question": "Guyana",
+      "answer": "Georgetown",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "169": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d168",
+      "question": "Suriname",
+      "answer": "Paramaribo",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "170": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d169",
+      "question": "French Guiana",
+      "answer": "Cayenne",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "171": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d170",
+      "question": "Ecuador",
+      "answer": "Quito",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "172": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d171",
+      "question": "Peru",
+      "answer": "Lima",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "173": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d172",
+      "question": "Bolivia",
+      "answer": "La Paz",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "174": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d173",
+      "question": "Paraguay",
+      "answer": "Asuncion",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "175": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d174",
+      "question": "Chile",
+      "answer": "Santiago",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "176": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d175",
+      "question": "Argentina",
+      "answer": "Buenos Aires",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "177": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d176",
+      "question": "Uruguay",
+      "answer": "Montevideo",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "178": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d177",
+      "question": "Falkland Islands",
+      "answer": "Stanley",
+      "tag": "South America",
+      "category": "FIRST"
+    }
+  }
+}
