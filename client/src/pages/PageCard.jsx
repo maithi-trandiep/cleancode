@@ -1,6 +1,6 @@
 import FormCreateCard from "../components/FormCreateCard";
 
-const Card = () => {
+const PageCard = () => {
     return (
         <div>
             <FormCreateCard />
@@ -8,4 +8,4 @@ const Card = () => {
     );
 }
 
-export default Card;
+export default PageCard;
