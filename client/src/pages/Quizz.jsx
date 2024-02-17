@@ -43,7 +43,7 @@ const Quizz = () => {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "10rem" }}>
+      <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
         <h1 style={{ flexBasis: "100%" }}>Quizz of the day</h1>
         <QuizzCard question={questions[currentIndex]} />
       </div>
