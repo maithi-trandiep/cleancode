@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const FILE_PATH = './db.json';
+const FILE_PATH = './db.json'; //utiliser une var d'envionnement
 
 const readDataFromFile = () => {
  try {
@@ -24,9 +24,9 @@ const getAllCards = () => {
 
 //* Récupérer une Carte par ID
 const getCardById = (id) => {
- const fiches = readDataFromFile();
- for (const index in fiches.cards) {
-  const card = fiches.cards[index];
+ const data = readDataFromFile();
+ for (const index in data.cards) {
+  const card = data.cards[index];
   if (index == id) {
    return card;
   }
@@ -36,11 +36,11 @@ const getCardById = (id) => {
 
 //* Récupérer toutes les Cartes ayant un certain tag
 const getCardsByTags = (tags) => {
- const fiches = readDataFromFile();
+ const data = readDataFromFile();
  const matchingCards = [];
 
- for (const id in fiches.cards) {
-  const card = fiches.cards[id];
+ for (const id in data.cards) {
+  const card = data.cards[id];
   for (const tag of tags) {
    if (card.tag === tag) {
     matchingCards.push(card);
@@ -54,19 +54,19 @@ const getCardsByTags = (tags) => {
 
 //* Créer une Carte
 const createCard = (newCard) => {
- const fiches = readDataFromFile();
- const newId = Object.keys(fiches.cards).length + 1;
- fiches.cards[newId] = newCard;
- writeDataToFile(fiches);
+ const data = readDataFromFile();
+ const newId = Object.keys(data.cards).length + 1;
+ data.cards[newId] = newCard;
+ writeDataToFile(data);
 };
 
 //* Mettre à jour une Carte
 const updateCard = (id, updatedCard) => {
- const fiches = readDataFromFile();
- const card = fiches.cards[id];
+ const data = readDataFromFile();
+ const card = data.cards[id];
  if (card) {
-  fiches.cards[id] = { ...card, ...updatedCard };
-  writeDataToFile(fiches);
+  data.cards[id] = { ...card, ...updatedCard };
+  writeDataToFile(data);
   return true;
  }
  return false;
@@ -74,10 +74,10 @@ const updateCard = (id, updatedCard) => {
 
 //* Supprimer une Carte
 const deleteCard = (id) => {
- const fiches = readDataFromFile();
- if (fiches.cards[id]) {
-  delete fiches.cards[id];
-  writeDataToFile(fiches);
+ const data = readDataFromFile();
+ if (data.cards[id]) {
+  delete data.cards[id];
+  writeDataToFile(data);
   return true;
  }
  return false;
