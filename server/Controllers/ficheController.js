@@ -16,14 +16,14 @@ const writeDataToFile = (data) => {
  fs.writeFileSync(FILE_PATH, JSON.stringify(data, null, 2));
 };
 
-//* Récupérer toutes les fiches
-const getAllFiches = () => {
+//* Récupérer toutes les Cartes
+const getAllCards = () => {
  return readDataFromFile();
 };
 
 
-//* Récupérer une fiche par ID
-const getFicheById = (id) => {
+//* Récupérer une Carte par ID
+const getCardById = (id) => {
  const fiches = readDataFromFile();
  for (const index in fiches.cards) {
   const card = fiches.cards[index];
@@ -34,47 +34,46 @@ const getFicheById = (id) => {
  }
 }
 
-//* Récupérer toutes les fiches ayant un certain tag
-const getFichesByTags = (tags) => {
- console.log(tags);
+//* Récupérer toutes les Cartes ayant un certain tag
+const getCardsByTags = (tags) => {
  const fiches = readDataFromFile();
- const matchingFiches = [];
+ const matchingCards = [];
 
  for (const id in fiches.cards) {
-  const fiche = fiches.cards[id];
+  const card = fiches.cards[id];
   for (const tag of tags) {
-   if (fiche.tag === tag) {
-    matchingFiches.push(fiche);
+   if (card.tag === tag) {
+    matchingCards.push(card);
     break;
    }
   }
  }
 
- return matchingFiches;
+ return matchingCards;
 };
 
-//* Créer une fiche
-const createFiche = (newFiche) => {
+//* Créer une Carte
+const createCard = (newCard) => {
  const fiches = readDataFromFile();
  const newId = Object.keys(fiches.cards).length + 1;
- fiches.cards[newId] = newFiche;
+ fiches.cards[newId] = newCard;
  writeDataToFile(fiches);
 };
 
-//* Mettre à jour une fiche
-const updateFiche = (id, updatedFiche) => {
+//* Mettre à jour une Carte
+const updateCard = (id, updatedCard) => {
  const fiches = readDataFromFile();
- const fiche = fiches.cards[id];
- if (fiche) {
-  fiches.cards[id] = { ...fiche, ...updatedFiche };
+ const card = fiches.cards[id];
+ if (card) {
+  fiches.cards[id] = { ...card, ...updatedCard };
   writeDataToFile(fiches);
   return true;
  }
  return false;
 };
 
-//* Supprimer une fiche
-const deleteFiche = (id) => {
+//* Supprimer une Carte
+const deleteCard = (id) => {
  const fiches = readDataFromFile();
  if (fiches.cards[id]) {
   delete fiches.cards[id];
@@ -85,4 +84,4 @@ const deleteFiche = (id) => {
 };
 
 
-module.exports = { getAllFiches, getFicheById, createFiche, updateFiche, deleteFiche, getFichesByTags };
+module.exports = { getAllCards, getCardById, createCard, updateCard, deleteCard, getCardsByTags };

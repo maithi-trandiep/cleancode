@@ -1,31 +1,41 @@
-# cleancode
-
 ## DOC API
 
-1.  Get toutes les fiches
-    GET http://localhost:3000/api/fiches
+1. **Obtenir toutes les cartes**
+    - Méthode : GET
+    - URL : `http://localhost:3000/api/cards`
 
-2.  Get toutes les fiches par tags
-    GET http://localhost:3000/api/fiches?tags=Europe,Africa
+2. **Obtenir toutes les cartes par tags**
+    - Méthode : GET
+    - URL : `http://localhost:3000/api/cards?tags=Europe,Africa`
 
-3.  Get une fiche by ID
-    GET http://localhost:3000/api/fiches/{id}
+3. **Obtenir une carte par ID**
+    - Méthode : GET
+    - URL : `http://localhost:3000/api/cards/{id}`
 
-4.  Create une fiche
-    POST http://localhost:3000/api/fiches/
-    body{
-    "id": "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
-    "question": "France",
-    "answer": "LA",
-    "tag": "Europe",
-    "category": "FIRST"
+4. **Créer une carte**
+    - Méthode : POST
+    - URL : `http://localhost:3000/api/cards/`
+    - Corps de la requête :
+    ```json
+    {
+        "id": "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
+        "question": "France",
+        "answer": "LA",
+        "tag": "Europe",
+        "category": "FIRST"
     }
+    ```
 
-5.  Patch une fiche
-    PATCH http://localhost:3000/api/fiches/{id}
-    body {
+5. **Modifier une carte**
+    - Méthode : PATCH
+    - URL : `http://localhost:3000/api/cards/{id}`
+    - Corps de la requête :
+    ```json
+    {
+        // Champ(s) à mettre à jour
+    }
+    ```
 
-}
-
-6.  Delete une fiche
-    DELETE http://localhost:3000/api/fiches/{id}
+6. **Supprimer une carte**
+    - Méthode : DELETE
+    - URL : `http://localhost:3000/api/cards/{id}`

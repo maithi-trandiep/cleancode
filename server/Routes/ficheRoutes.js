@@ -2,74 +2,69 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 
-
 const {
- getAllFiches,
- getFicheById,
- createFiche,
- updateFiche,
- deleteFiche,
- getFichesByTags
+ getAllCards,
+ getCardById,
+ createCard,
+ updateCard,
+ deleteCard,
+ getCardsByTags
 } = require('../Controllers/ficheController');
-
 
 router.use(bodyParser.json());
 
-router.get('/fiches', (req, res) => {
+router.get('/cards', (req, res) => {
  console.log(req.query.tags);
  if (req.query.tags) {
   const tags = req.query.tags;
   const tagsArray = tags.split(',');
-  const matchingFiches = getFichesByTags(tagsArray);
+  const matchingCards = getCardsByTags(tagsArray);
 
-  if (matchingFiches.length > 0) {
-   res.json(matchingFiches);
+  if (matchingCards.length > 0) {
+   res.json(matchingCards);
   } else {
    res.status(404).json({ message: 'Aucune fiche trouvée avec ces tags' });
   }
  } else {
-  const fiches = getAllFiches();
-  res.json(fiches);
+  const cards = getAllCards();
+  res.json(cards);
  }
 });
 
-router.get('/fiches/:id', (req, res) => {
- const fiche = getFicheById(parseInt(req.params.id));
- if (fiche) {
-  res.json(fiche);
+router.get('/cards/:id', (req, res) => {
+ const card = getCardById(parseInt(req.params.id));
+ if (card) {
+  res.json(card);
  } else {
-  res.status(404).json({ message: 'Fiche non trouvée' });
+  res.status(404).json({ message: 'Carte non trouvée' });
  }
-
 });
 
-
-router.post('/fiches', (req, res) => {
- const newFiche = req.body;
- console.log(newFiche);
- createFiche(newFiche);
- res.status(201).json(newFiche);
+router.post('/cards', (req, res) => {
+ const newCard = req.body;
+ console.log(newCard);
+ createCard(newCard);
+ res.status(201).json(newCard);
 });
 
-
-router.patch('/fiches/:id', (req, res) => {
+router.patch('/cards/:id', (req, res) => {
  const id = parseInt(req.params.id);
- const updatedFiche = req.body;
- const success = updateFiche(id, updatedFiche);
+ const updatedCard = req.body;
+ const success = updateCard(id, updatedCard);
  if (success) {
-  res.json({ message: 'Fiche mise à jour avec succès' });
+  res.json({ message: 'Carte mise à jour avec succès' });
  } else {
-  res.status(404).json({ message: 'Fiche non trouvée' });
+  res.status(404).json({ message: 'Carte non trouvée' });
  }
 });
 
-router.delete('/fiches/:id', (req, res) => {
+router.delete('/cards/:id', (req, res) => {
  const id = parseInt(req.params.id);
- const success = deleteFiche(id);
+ const success = deleteCard(id);
  if (success) {
-  res.json({ message: 'Fiche supprimée avec succès' });
+  res.json({ message: 'Carte supprimée avec succès' });
  } else {
-  res.status(404).json({ message: 'Fiche non trouvée' });
+  res.status(404).json({ message: 'Carte non trouvée' });
  }
 });
 
