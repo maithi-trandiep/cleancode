@@ -2,19 +2,19 @@
 
 1. **Obtenir toutes les cartes**
     - Méthode : GET
-    - URL : `http://localhost:3000/api/cards`
+    - URL : `http://localhost:8080/cards`
 
 2. **Obtenir toutes les cartes par tags**
     - Méthode : GET
-    - URL : `http://localhost:3000/api/cards?tags=Europe,Africa`
+    - URL : `http://localhost:8080/cards?tags=Europe,Africa`
 
 3. **Obtenir une carte par ID**
     - Méthode : GET
-    - URL : `http://localhost:3000/api/cards/{id}`
+    - URL : `http://localhost:8080/cards/{id}`
 
 4. **Créer une carte**
     - Méthode : POST
-    - URL : `http://localhost:3000/api/cards/`
+    - URL : `http://localhost:8080/cards/`
     - Corps de la requête :
     ```json
     {
@@ -28,7 +28,7 @@
 
 5. **Modifier une carte**
     - Méthode : PATCH
-    - URL : `http://localhost:3000/api/cards/{id}`
+    - URL : `http://localhost:8080/cards/{id}`
     - Corps de la requête :
     ```json
     {
@@ -38,4 +38,4 @@
 
 6. **Supprimer une carte**
     - Méthode : DELETE
-    - URL : `http://localhost:3000/api/cards/{id}`
+    - URL : `http://localhost:8080/cards/{id}`

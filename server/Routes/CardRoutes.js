@@ -9,12 +9,11 @@ const {
  updateCard,
  deleteCard,
  getCardsByTags
-} = require('../Controllers/ficheController');
+} = require('../Controllers/CardController');
 
 router.use(bodyParser.json());
 
 router.get('/cards', (req, res) => {
- console.log(req.query.tags);
  if (req.query.tags) {
   const tags = req.query.tags;
   const tagsArray = tags.split(',');
