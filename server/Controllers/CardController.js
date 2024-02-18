@@ -91,4 +91,5 @@ module.exports = {
     updateCard,
     deleteCard,
     getCardsByTags,
-    getCardsByCategories };
+    getCardsByCategories
+};

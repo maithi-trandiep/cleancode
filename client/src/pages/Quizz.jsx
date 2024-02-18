@@ -6,6 +6,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Alert from '@mui/material/Alert';
 import CheckIcon from '@mui/icons-material/Check';
 import { CardService } from "../service/CardService";
+import { QuizService } from "../service/QuizService";
 
 const Quizz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,14 +32,13 @@ const Quizz = () => {
         await CardService.updateCard(card.id, { category: card.category });
       });
     }
-    // à remettre pour rendre
-    //localStorage.setItem('lastQuiz', new Date());
+
     // pour test
-    localStorage.setItem('lastQuiz', daysAgo(1));
+    // à mettre dateQuiz: new Date() pour rendre
+    QuizService.createQuiz({ user_id: 1, dateQuiz: daysAgo(1) });
   }
 
   const handleSubmitAnswer = (card, answer) => {
-    // console.log("answer", card, answer);
     setHasAnwser(true);
     if (card.answer.toLowerCase() === answer.toLowerCase()) {
       card.category = ''+ (parseInt(card.category) + 1);
@@ -63,50 +63,51 @@ const Quizz = () => {
   };
 
   useEffect(() => {
-    let lastQuiz = localStorage.getItem('lastQuiz');
-    let newCategories = ['1'];
-    if (lastQuiz) {
-      let previous = new Date(lastQuiz);
-      let diff = datediff(previous, new Date());
-      if (diff >= 1) {
-        newCategories.push('2');
-      } 
-      if (diff >= 3) {
-        newCategories.push('3');
-      } 
-      if (diff >= 7) {
-        newCategories.push('4');
-      } 
-      if (diff >= 15) {
-        newCategories.push('5');
-      } 
-      if (diff >= 31) {
-        newCategories.push('6');
+    const fetchLastQuizByUser = async (userId) => {
+      const response = await QuizService.getLastQuizByUser(userId); 
+      if (response && response.dateQuiz) {
+        let previous = new Date(response.dateQuiz);
+        let diff = datediff(previous, new Date());
+        let newCategories = ['1'];
+        if (diff >= 1) {
+          newCategories.splice(0, 0, '2');
+        } 
+        if (diff >= 3) {
+          newCategories.splice(0, 0, '3');
+        } 
+        if (diff >= 7) {
+          newCategories.splice(0, 0, '4');
+        } 
+        if (diff >= 15) {
+          newCategories.splice(0, 0, '5');
+        } 
+        if (diff >= 31) {
+          newCategories.splice(0, 0, '6');
+        }
+        if (diff >= 63) {
+          newCategories.splice(0, 0, '7');
+        } 
+        fetchCards(newCategories);
       }
-      if (diff >= 63) {
-        newCategories.push('7');
-      } 
-      console.log("diff", diff, newCategories);
-    }
+    };
 
     const fetchCards = async (categories) => {
       const response = await CardService.getCardByCategories(categories);
-      console.log("response", response.length, categories);
       const data = response;
       setCards(data);
     };
 
-    fetchCards(newCategories);
+    fetchLastQuizByUser(1);
   }, []);
 
 
   return (
     <div>
-      {hasDone && <Alert severity="success">Quizz done</Alert>}
+      {hasDone && <Alert severity="success">Quiz done</Alert>}
       { !hasDone &&
         <div>
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "10rem" }}>
-            <h1 style={{ flexBasis: "100%" }}>Quizz of the day</h1>
+            <h1 style={{ flexBasis: "100%" }}>Quiz of the day</h1>
             {hasAnwser && (
               <Alert icon={<CheckIcon fontSize="inherit" />} severity={isCorrect ? "success" : "error"}>
                 {isCorrect ? "Correct answer" : "Wrong answer"}

@@ -6,7 +6,7 @@
       "question": "France",
       "answer": "Paris",
       "tag": "Europe",
-      "category": "1"
+      "category": "3"
     },
     "2": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d1",
@@ -14,7 +14,7 @@
       "question": "Spain",
       "answer": "Madrid",
       "tag": "Europe",
-      "category": "1"
+      "category": "3"
     },
     "3": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d2",
@@ -22,7 +22,7 @@
       "question": "Germany",
       "answer": "Berlin",
       "tag": "Europe",
-      "category": "1"
+      "category": "2"
     },
     "4": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d3",
@@ -1360,5 +1360,47 @@
       "category": "1",
       "id": 170
     }
-  }
+  },
+  "quiz": [
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T20:06:31.255Z",
+      "id": 1
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T20:07:04.002Z",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:23:46.317Z",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:25:33.863Z",
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:25:47.664Z",
+      "id": 5
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:25:55.465Z",
+      "id": 6
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:30:17.802Z",
+      "id": 7
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:32:26.820Z",
+      "id": 8
+    }
+  ]
 }
