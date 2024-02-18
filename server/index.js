@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const cardRoutes = require('./Routes/CardRoutes');
+const { router } = require('./Routes/CardRoutes');
 const cors = require('cors');
 
 app.use(cors());
-app.use('/', cardRoutes);
+app.use('/', router);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 8080;

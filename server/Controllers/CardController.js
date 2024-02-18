@@ -17,7 +17,7 @@ const writeDataToFile = (data) => {
 
 
 const getAllCards = () => {
- return Object.values(readDataFromFile().cards);
+ return readDataFromFile().cards;
 };
 
 
@@ -26,11 +26,10 @@ const getCardById = (id) => {
  for (const cardId in cardData) {
   const card = cardData[cardId];
   if (card.id === id) {
-   console.log("card", card);
    return card;
   }
  }
- return null;
+ return [];
 };
 
 //TODO: getCardByUser
@@ -58,10 +57,10 @@ const updateCard = (id, updatedFields) => {
   if (data.cards[cardId].id === id) {
    data.cards[cardId] = { ...data.cards[cardId], ...updatedFields, id };
    writeDataToFile(data);
-   return true;
+   return data.cards[cardId];
   }
  }
- return false;
+ return null;
 };
 
 
