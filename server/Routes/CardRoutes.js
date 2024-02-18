@@ -41,7 +41,6 @@ router.get('/cards/:id', (req, res) => {
 
 router.post('/cards', (req, res) => {
  const newCard = req.body;
- console.log("newCard", newCard);
  if (createCard(newCard)) {
   res.status(201).json(newCard);
  } else {

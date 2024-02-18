@@ -2,7 +2,7 @@
   "cards": {
     "1": {
       "id": "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
-      "question": "France",
+      "question": "Tunisie",
       "answer": "Paris",
       "tag": "Europe",
       "category": "FIRST"
@@ -37,7 +37,7 @@
     },
     "6": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d5",
-      "question": "Netherlands",
+      "question": "France ou nnon ou pas ou pas",
       "answer": "Amsterdam",
       "tag": "Europe",
       "category": "FIRST"
@@ -327,6 +327,13 @@
       "question": "Monaco",
       "answer": "Monaco",
       "tag": "Europe",
+      "category": "FIRST"
+    },
+    "48": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d47",
+      "question": "Senegal",
+      "answer": "Dakar",
+      "tag": "Africa",
       "category": "FIRST"
     },
     "49": {
@@ -1204,11 +1211,39 @@
       "tag": "South America",
       "category": "FIRST"
     },
+    "175": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d174",
+      "question": "Chile",
+      "answer": "Santiago",
+      "tag": "South America",
+      "category": "FIRST"
+    },
     "176": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d175",
       "question": "Argentina",
       "answer": "Buenos Aires",
       "tag": "South America",
+      "category": "FIRST"
+    },
+    "177": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d176",
+      "question": "Uruguay",
+      "answer": "Montevideo",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "178": {
+      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d177",
+      "question": "Falkland Islands",
+      "answer": "Stanley",
+      "tag": "South America",
+      "category": "FIRST"
+    },
+    "179": {
+      "id": "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
+      "question": "France",
+      "answer": "LA",
+      "tag": "Europe",
       "category": "FIRST"
     }
   }
