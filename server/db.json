@@ -46,7 +46,7 @@
       "question": "Netherlands",
       "answer": "Amsterdam",
       "tag": "Europe",
-      "category": "1"
+      "category": "2"
     },
     "7": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d6",
@@ -1411,6 +1411,11 @@
       "user_id": 1,
       "dateQuiz": "2024-02-17T21:40:06.268Z",
       "id": 10
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:46:40.006Z",
+      "id": 11
     }
   ]
 }

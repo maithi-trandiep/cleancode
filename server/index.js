@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
-const cardRoutes = require('./Routes/CardRoutes');
-const quizRoutes = require('./Routes/QuizRoutes');
+const cors = require('cors');
+
+const { router } = require('./Routes/CardRoutes');
+const { quizRouter } = require('./Routes/QuizRoutes');
 const cors = require('cors');
 
 app.use(cors());
-app.use('/', cardRoutes);
-app.use('/', quizRoutes);
+app.use('/', router);
+app.use('/', quizRouter);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 8080;

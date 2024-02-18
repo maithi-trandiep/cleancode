@@ -105,7 +105,7 @@ const Quiz = () => {
       {hasDone && <Alert severity="success">Quiz done</Alert>}
       { !hasDone &&
         <div>
-          <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "10rem" }}>
+          <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
             <h1 style={{ flexBasis: "100%" }}>Quiz of the day</h1>
             {hasAnwser && (
               <Alert icon={<CheckIcon fontSize="inherit" />} severity={isCorrect ? "success" : "error"}>
