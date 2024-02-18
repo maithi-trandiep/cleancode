@@ -10,11 +10,15 @@ export const CardService = {
         return response.data;
     },
     async getCardById(id) {
-        const response = await axios.get(`http://localhost:8080/cards/cards/${id}`);
+        const response = await axios.get(`http://localhost:8080/cards/${id}`);
+        return response.data;
+    },
+    async getCardByCategories(categories) {
+        const response = await axios.get(`http://localhost:8080/cards?categories=${categories}`);
         return response.data;
     },
     async getCardsByTags(tags) {
-        const response = await axios.get(`http://localhost:8080/cards/cards?tags=${tags}`)
+        const response = await axios.get(`http://localhost:8080/cards?tags=${tags}`)
         return response.data;
     },
     async updateCard(id, card) {

@@ -11,7 +11,7 @@ import Alert from '@mui/material/Alert';
 
 const FormCreateCard = ({ onNewCard }) => {
     const [cards, setCards] = useState([]);
-    const [card, setCard] = useState({ question: '', answer: '', tag: '', category: 'FIRST'});
+    const [card, setCard] = useState({user_id: 1, question: '', answer: '', tag: '', category: 'FIRST'});
     const [open, setOpen] = useState(false);
 
     const handleSuccess = () => {
@@ -29,8 +29,9 @@ const FormCreateCard = ({ onNewCard }) => {
         e.preventDefault();
         const newCard = await CardService.createCard(card);
         if (newCard) {
+            console.log("newCard", newCard);
             setCards([...cards, newCard]);
-            setCard({ question: '', answer: '', tag: '', category: 'FIRST'});
+            setCard({user_id: 1, question: '', answer: '', tag: '', category: 'FIRST'});
             handleSuccess();
             
             onNewCard(newCard);

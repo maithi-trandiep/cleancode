@@ -8,13 +8,14 @@ const {
  createCard,
  updateCard,
  deleteCard,
- getCardsByTags
+ getCardsByTags,
+ getCardsByCategories
 } = require('../Controllers/CardController');
 
 router.use(bodyParser.json());
 
 router.get('/cards', (req, res) => {
- if (req.query.tags) {
+ if (req.query && req.query.tags) {
   const tags = req.query.tags;
   const tagsArray = tags.split(',');
   const matchingCards = getCardsByTags(tagsArray);
@@ -24,6 +25,16 @@ router.get('/cards', (req, res) => {
   } else {
    res.status(404).json({ message: 'Aucune fiche trouvée avec ces tags' });
   }
+ } else if (req.query && req.query.categories) {
+    const categories = req.query.categories;
+    const categoriesArray = categories.split(',');
+    const matchingCards = getCardsByCategories(categoriesArray);
+    
+    if (matchingCards.length > 0) {
+     res.status(200).json(matchingCards);
+    } else {
+     res.status(404).json({ message: 'Aucune fiche trouvée avec ces catégories' });
+    }
  } else {
   const cards = getAllCards();
   res.status(200).json(cards);
@@ -69,5 +80,7 @@ router.delete('/cards/:id', (req, res) => {
   res.status(404).json({ message: 'Carte non trouvée' });
  }
 });
+
+
 
 module.exports = router;
