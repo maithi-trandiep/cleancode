@@ -9,10 +9,6 @@ export const QuizService = {
         const response = await axios.get(`http://localhost:8080/quiz`);
         return response.data;
     },
-    async getQuizByUser(userId) {
-        const response = await axios.get(`http://localhost:8080/users/${userId}/quiz`);
-        return response.data;
-    },
     async getLastQuizByUser(userId) {
         const response = await axios.get(`http://localhost:8080/users/${userId}/lastQuiz`);
         return response.data;
