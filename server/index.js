@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
-const ficheRoutes = require('./Routes/CardRoutes');
-app.use('/', ficheRoutes);
+const cardRoutes = require('./Routes/CardRoutes');
+const cors = require('cors');
+
+app.use(cors());
+app.use('/', cardRoutes);
 
 // Démarrer le serveur
 const PORT = process.env.PORT || 8080;

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Quizz from "./pages/Quizz";
+import UserCard from "./pages/UserCard";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-           <Route path="/quizz" element={<Quizz />} />
+            <Route path="/quizz" element={<Quizz />} />
+            <Route path="/card" element={<UserCard />} />
           </Route>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
