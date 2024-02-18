@@ -22,7 +22,7 @@
       "question": "Germany",
       "answer": "Berlin",
       "tag": "Europe",
-      "category": "2"
+      "category": "3"
     },
     "4": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d3",
@@ -30,7 +30,7 @@
       "question": "Italy",
       "answer": "Rome",
       "tag": "Europe",
-      "category": "1"
+      "category": "2"
     },
     "5": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d4",
@@ -1401,6 +1401,11 @@
       "user_id": 1,
       "dateQuiz": "2024-02-17T21:32:26.820Z",
       "id": 8
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-17T21:35:13.853Z",
+      "id": 9
     }
   ]
 }

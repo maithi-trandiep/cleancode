@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import QuizzCard from "../components/QuizzCard";
+import QuizCard from "../components/QuizCard";
 import Button from "@mui/material/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ButtonGroup from "@mui/material/ButtonGroup";
@@ -8,7 +8,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { CardService } from "../service/CardService";
 import { QuizService } from "../service/QuizService";
 
-const Quizz = () => {
+const Quiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cards, setCards] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -25,7 +25,6 @@ const Quizz = () => {
   }
 
   const handleDone = () => {
-    console.log("answeredCards", answeredCards);
     setHasDone(true);
     if (answeredCards.length > 0) {
       answeredCards.forEach(async (card) => {
@@ -114,7 +113,7 @@ const Quizz = () => {
               </Alert>
             )}
             { (cards.length > 0) ?
-                <QuizzCard card={cards[currentIndex]} submitAnswer={handleSubmitAnswer} answerValidated={hasAnwser} />
+                <QuizCard card={cards[currentIndex]} submitAnswer={handleSubmitAnswer} answerValidated={hasAnwser} />
                 : <p>Loading...</p>
             }
           </div>
@@ -132,4 +131,4 @@ const Quizz = () => {
   );
 };
 
-export default Quizz;
+export default Quiz;

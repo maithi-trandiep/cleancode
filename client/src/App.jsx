@@ -5,7 +5,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import Quizz from "./pages/Quizz";
+import Quiz from "./pages/Quiz";
 import UserCard from "./pages/UserCard";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/quizz" element={<Quizz />} />
+            <Route path="/quizz" element={<Quiz />} />
             <Route path="/card" element={<UserCard />} />
           </Route>
           <Route path="/signin" element={<SignIn />} />
