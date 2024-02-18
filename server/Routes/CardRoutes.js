@@ -31,7 +31,7 @@ router.get('/cards', (req, res) => {
 });
 
 router.get('/cards/:id', (req, res) => {
- const card = getCardById(parseInt(req.params.id));
+ const card = getCardById(req.params.id);
  if (card) {
   res.status(200).json(card);
  } else {
@@ -42,15 +42,15 @@ router.get('/cards/:id', (req, res) => {
 router.post('/cards', (req, res) => {
  const newCard = req.body;
  console.log("newCard", newCard);
- if(createCard(newCard)){
+ if (createCard(newCard)) {
   res.status(201).json(newCard);
- }else{
+ } else {
   res.status(400).json({ message: 'Erreur lors de la création de la carte' });
  }
 });
 
 router.patch('/cards/:id', (req, res) => {
- const id = parseInt(req.params.id);
+ const id = req.params.id;
  const updatedCard = req.body;
  const success = updateCard(id, updatedCard);
  if (success) {
@@ -61,7 +61,7 @@ router.patch('/cards/:id', (req, res) => {
 });
 
 router.delete('/cards/:id', (req, res) => {
- const id = parseInt(req.params.id);
+ const id = req.params.id;
  const success = deleteCard(id);
  if (success) {
   res.status(200).json({ message: 'Carte supprimée avec succès' });

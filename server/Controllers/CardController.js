@@ -1,87 +1,78 @@
 const fs = require('fs');
 
-const FILE_PATH = './db.json'; //utiliser une var d'envionnement
+const FILE_PATH = './db.json';
 
 const readDataFromFile = () => {
  try {
   const data = fs.readFileSync(FILE_PATH);
   return JSON.parse(data);
  } catch (err) {
-  return [];
+  return { cards: {} };
  }
 };
-
 
 const writeDataToFile = (data) => {
  fs.writeFileSync(FILE_PATH, JSON.stringify(data, null, 2));
 };
 
-//* Récupérer toutes les Cartes
+
 const getAllCards = () => {
- return readDataFromFile();
+ return Object.values(readDataFromFile().cards);
 };
 
 
-//* Récupérer une Carte par ID
 const getCardById = (id) => {
- const data = readDataFromFile();
- for (const index in data.cards) {
-  const card = data.cards[index];
-  if (index == id) {
+ const cardData = readDataFromFile().cards;
+ for (const cardId in cardData) {
+  const card = cardData[cardId];
+  if (card.id === id) {
+   console.log("card", card);
    return card;
   }
-  return [];
  }
-}
+ return null;
+};
 
 //TODO: getCardByUser
 
-//* Récupérer toutes les Cartes ayant un certain tag
+
 const getCardsByTags = (tags) => {
- const data = readDataFromFile();
- const matchingCards = [];
-
- for (const id in data.cards) {
-  const card = data.cards[id];
-  for (const tag of tags) {
-   if (card.tag === tag) {
-    matchingCards.push(card);
-    break;
-   }
-  }
- }
-
- return matchingCards;
+ const cards = Object.values(readDataFromFile().cards);
+ return cards.filter(card => tags.includes(card.tag));
 };
 
-//* Créer une Carte
+
 const createCard = (newCard) => {
  const data = readDataFromFile();
- const newId = Object.keys(data.cards).length + 1;
- data.cards[newId] = newCard;
+ const index = Object.keys(data.cards).length + 1;
+ data.cards[index] = newCard;
  writeDataToFile(data);
  return newCard;
 };
 
-//* Mettre à jour une Carte
-const updateCard = (id, updatedCard) => {
+
+const updateCard = (id, updatedFields) => {
  const data = readDataFromFile();
- const card = data.cards[id];
- if (card) {
-  data.cards[id] = { ...card, ...updatedCard };
-  writeDataToFile(data);
-  return true;
+ const cardIds = Object.keys(data.cards);
+ for (const cardId of cardIds) {
+  if (data.cards[cardId].id === id) {
+   data.cards[cardId] = { ...data.cards[cardId], ...updatedFields, id };
+   writeDataToFile(data);
+   return true;
+  }
  }
  return false;
 };
 
-//* Supprimer une Carte
+
 const deleteCard = (id) => {
  const data = readDataFromFile();
- if (data.cards[id]) {
-  delete data.cards[id];
-  writeDataToFile(data);
-  return true;
+ for (const key in data.cards) {
+  if (data.cards[key].id === id) {
+   delete data.cards[key];
+   writeDataToFile(data);
+   return true;
+  }
  }
  return false;
 };
