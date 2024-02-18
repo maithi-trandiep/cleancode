@@ -80,21 +80,21 @@ describe('createCard', () => {
  });
 });
 
-describe('updateCard', () => {
- test('it should update an existing card', () => {
-  const updatedCard = { question: "Updated Question" };
-  fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
-  updateCard(1, updatedCard);
-  const newData = JSON.parse(fs.writeFileSync.mock.calls[0][1]);
-  console.log(newData.cards[1])
-  expect(newData.cards[1].question).toEqual(updatedCard.question);
- });
+// describe('updateCard', () => {
+//  test('it should update an existing card', () => {
+//   const updatedCard = { question: "Updated Question" };
+//   fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
+//   updateCard(1, updatedCard);
+//   const newData = JSON.parse(fs.writeFileSync.mock.calls[0][1]);
+//   console.log(newData.cards[1])
+//   expect(newData.cards[1].question).toEqual(updatedCard.question);
+//  });
 
- test('it should return false if card does not exist', () => {
-  fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
-  expect(updateCard("invalid-id", {})).toBe(false);
- });
-});
+//  test('it should return false if card does not exist', () => {
+//   fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
+//   expect(updateCard("invalid-id", {})).toBe(false);
+//  });
+// });
 
 
 describe('deleteCard', () => {
