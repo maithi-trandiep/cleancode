@@ -11,7 +11,7 @@ import Alert from '@mui/material/Alert';
 
 const FormCreateCard = ({ onNewCard }) => {
     const [cards, setCards] = useState([]);
-    const [card, setCard] = useState({ question: '', answer: '', tag: '', category: 'FIRST'});
+    const [card, setCard] = useState({user_id: 1, question: '', answer: '', tag: '', category: 'FIRST'});
     const [open, setOpen] = useState(false);
 
     const handleSuccess = () => {
@@ -29,8 +29,9 @@ const FormCreateCard = ({ onNewCard }) => {
         e.preventDefault();
         const newCard = await CardService.createCard(card);
         if (newCard) {
+            console.log("newCard", newCard);
             setCards([...cards, newCard]);
-            setCard({ question: '', answer: '', tag: '', category: 'FIRST'});
+            setCard({user_id: 1, question: '', answer: '', tag: '', category: 'FIRST'});
             handleSuccess();
             
             onNewCard(newCard);
@@ -55,7 +56,7 @@ const FormCreateCard = ({ onNewCard }) => {
             variant="filled"
             sx={{ width: '100%' }}
           >
-            Carte créée avec succès !
+            Card created successfully !
           </Alert>
         </Snackbar>
         <Box
@@ -67,7 +68,7 @@ const FormCreateCard = ({ onNewCard }) => {
           }}
         >
           <Typography component="h1" variant="h5">
-            Créer une carte
+            Create new card
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -86,7 +87,7 @@ const FormCreateCard = ({ onNewCard }) => {
                 required
                 fullWidth
                 id="answer"
-                label="Réponse"
+                label="Answer"
                 name="answer"
                 value={card.answer}
                 onChange={(e) => handleChange(e, 'answer')}
@@ -107,7 +108,7 @@ const FormCreateCard = ({ onNewCard }) => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Valider
+              Create
             </Button>
           </Box>
         </Box>

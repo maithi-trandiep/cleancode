@@ -14,8 +14,8 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
-  { label: "Créer Carte", link: "/card" },
-  { label: "Quizz du jour", link: "/quizz" },
+  { label: "Create card", link: "/card" },
+  { label: "Take quiz", link: "/quiz" },
 ];
 
 function ResponsiveAppBar() {
