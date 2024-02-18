@@ -14,7 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
-  { label: "Créer Carte", link: "/" },
+  { label: "Créer Carte", link: "/card" },
   { label: "Quizz du jour", link: "/quizz" },
 ];
 
