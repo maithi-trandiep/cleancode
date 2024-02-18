@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 import { useState } from "react";
 
-const QuizzCard = ({ card, submitAnswer, answerValidated }) => {
+const QuizCard = ({ card, submitAnswer, answerValidated }) => {
   const [answer, setAnswer] = useState('');
 
   const handleChange = (e, name) => {
@@ -39,7 +39,7 @@ const QuizzCard = ({ card, submitAnswer, answerValidated }) => {
   );
 };
 
-export default QuizzCard;
+export default QuizCard;
 
 
 

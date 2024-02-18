@@ -15,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
   { label: "Créer Carte", link: "/card" },
-  { label: "Quizz du jour", link: "/quizz" },
+  { label: "Quiz du jour", link: "/quiz" },
 ];
 
 function ResponsiveAppBar() {
