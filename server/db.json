@@ -329,13 +329,6 @@
       "tag": "Europe",
       "category": "FIRST"
     },
-    "48": {
-      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d47",
-      "question": "Senegal",
-      "answer": "Dakar",
-      "tag": "Africa",
-      "category": "FIRST"
-    },
     "49": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d48",
       "question": "Mali",
@@ -1211,38 +1204,11 @@
       "tag": "South America",
       "category": "FIRST"
     },
-    "175": {
-      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d174",
-      "question": "Chile",
-      "answer": "Santiago",
-      "tag": "South America",
-      "category": "FIRST"
-    },
     "176": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d175",
       "question": "Argentina",
       "answer": "Buenos Aires",
       "tag": "South America",
-      "category": "FIRST"
-    },
-    "177": {
-      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d176",
-      "question": "Uruguay",
-      "answer": "Montevideo",
-      "tag": "South America",
-      "category": "FIRST"
-    },
-    "178": {
-      "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d177",
-      "question": "Falkland Islands",
-      "answer": "Stanley",
-      "tag": "South America",
-      "category": "FIRST"
-    },
-    "179": {
-      "question": "Vietnam",
-      "answer": "Hanoi",
-      "tag": "Asia",
       "category": "FIRST"
     }
   }
