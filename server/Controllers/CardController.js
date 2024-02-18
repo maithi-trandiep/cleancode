@@ -66,6 +66,7 @@ const updateCard = (id, updatedCard) => {
  const card = data.cards[id];
  if (card) {
   data.cards[id] = { ...card, ...updatedCard };
+  console.log(data);
   writeDataToFile(data);
   return true;
  }
