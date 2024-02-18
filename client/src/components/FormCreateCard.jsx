@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -6,11 +6,10 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CardService } from '../service/CardService';
-import CheckIcon from '@mui/icons-material/Check';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
-const FormCreateCard = () => {
+const FormCreateCard = ({ onNewCard }) => {
     const [cards, setCards] = useState([]);
     const [card, setCard] = useState({ question: '', answer: '', tag: '', category: 'FIRST'});
     const [open, setOpen] = useState(false);
@@ -33,6 +32,8 @@ const FormCreateCard = () => {
             setCards([...cards, newCard]);
             setCard({ question: '', answer: '', tag: '', category: 'FIRST'});
             handleSuccess();
+            
+            onNewCard(newCard);
         }
     }
 
