@@ -34,6 +34,8 @@ const getCardById = (id) => {
  }
 }
 
+//TODO: getCardByUser
+
 //* Récupérer toutes les Cartes ayant un certain tag
 const getCardsByTags = (tags) => {
  const data = readDataFromFile();
@@ -58,6 +60,7 @@ const createCard = (newCard) => {
  const newId = Object.keys(data.cards).length + 1;
  data.cards[newId] = newCard;
  writeDataToFile(data);
+ return newCard;
 };
 
 //* Mettre à jour une Carte

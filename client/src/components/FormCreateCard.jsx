@@ -5,16 +5,35 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
+import { CardService } from '../service/CardService';
+import CheckIcon from '@mui/icons-material/Check';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 const FormCreateCard = () => {
     const [cards, setCards] = useState([]);
-    const [card, setCard] = useState({ question: '', reponse: '', tag: ''});
-    
-    const handleSubmit = (e) => {
+    const [card, setCard] = useState({ question: '', answer: '', tag: '', category: 'FIRST'});
+    const [open, setOpen] = useState(false);
+
+    const handleSuccess = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = (event, reason) => {
+      if (reason === 'clickaway') {
+        return;
+      }
+      setOpen(false);
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(card);
-        setCards([...cards, card]);
-        setCard({ question: '', reponse: '', tag: ''});
+        const newCard = await CardService.createCard(card);
+        if (newCard) {
+            setCards([...cards, newCard]);
+            setCard({ question: '', answer: '', tag: '', category: 'FIRST'});
+            handleSuccess();
+        }
     }
 
     const handleChange = (e, name) => {
@@ -28,6 +47,16 @@ const FormCreateCard = () => {
     return (
         <Container component="main" maxWidth="xs">
         <CssBaseline />
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            variant="filled"
+            sx={{ width: '100%' }}
+          >
+            Carte créée avec succès !
+          </Alert>
+        </Snackbar>
         <Box
           sx={{
             marginTop: 8,
@@ -55,11 +84,11 @@ const FormCreateCard = () => {
                 margin="normal"
                 required
                 fullWidth
-                id="reponse"
+                id="answer"
                 label="Réponse"
-                name="reponse"
-                value={card.reponse}
-                onChange={(e) => handleChange(e, 'reponse')}
+                name="answer"
+                value={card.answer}
+                onChange={(e) => handleChange(e, 'answer')}
             />
             <TextField
                 margin="normal"
