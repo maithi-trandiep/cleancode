@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,15 +9,37 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { AuthService } from '../service/AuthService';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthProvider';
+
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+  const { setAuth } = useAuth();
+  const navigateTo = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    
+    try {
+      const response = await AuthService.signIn({ email, password });
+      const accessToken = response.data.accessToken;
+      const userId = response.data.id;
+      const nom = response.data.nom;
+      const prenom = response.data?.prenom;
+      setAuth({ userId, nom, prenom, email, password, accessToken });
+      setEmail('');
+      setPassword('');
+      navigateTo(from, { replace: true });
+    } catch (error) {
+      console.error('Error', error);
+      throw error;
+    }
   };
 
   return (
@@ -47,6 +69,7 @@ export default function SignIn() {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               margin="normal"
@@ -57,6 +80,7 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <Button
               type="submit"

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,15 +9,23 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { AuthService } from '../service/AuthService';
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const [prenom, setPrenom] = useState("");
+  const [nom, setNom] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+    try {
+      await AuthService.signUp({ email, password, nom, prenom });
+    } catch (error) {
+      console.error("Error", error);
+      throw error;
+    }
   };
 
   return (
@@ -47,6 +55,7 @@ export default function SignUp() {
                   label="Nom"
                   name="nom"
                   autoComplete="family-name"
+                  onChange={(e) => setNom(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -58,6 +67,7 @@ export default function SignUp() {
                   id="prenom"
                   label="Prénom"
                   autoFocus
+                  onChange={(e) => setPrenom(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -68,6 +78,7 @@ export default function SignUp() {
                   label="Email"
                   name="email"
                   autoComplete="email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -79,6 +90,7 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </Grid>
             </Grid>
