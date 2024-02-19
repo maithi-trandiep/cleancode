@@ -11,13 +11,13 @@ import { QuizService } from "../service/QuizService";
 const Quiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cards, setCards] = useState([]);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(null);
   const [hasAnwser, setHasAnwser] = useState(false);
   const [hasDone, setHasDone] = useState(false);
   const [answeredCards, setAnsweredCards] = useState([]);
 
   const handleNext = () => {
-    setIsCorrect(false);
+    setIsCorrect(null);
     setHasAnwser(false);
     setCurrentIndex((prevIndex) =>
       prevIndex === cards.length - 1 ? prevIndex : prevIndex + 1
@@ -119,7 +119,7 @@ const Quiz = () => {
             <h1 style={{ flexBasis: "100%" }}>Quiz of the day</h1>
             
             { (cards.length > 0) ?
-                <QuizCard card={cards[currentIndex]} submitAnswer={handleSubmitAnswer} answerValidated={hasAnwser} />
+                <QuizCard card={cards[currentIndex]} submitAnswer={handleSubmitAnswer} answerValidated={hasAnwser} isCorrect={isCorrect} />
                 : <p>Loading...</p>
             }
           </div>
