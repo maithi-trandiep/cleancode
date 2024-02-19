@@ -15,6 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 const pages = [
   { label: "Create card", link: "/card" },
+  { label: "My cards", link: "/mycards" },
   { label: "Take quiz", link: "/quiz" },
 ];
 
