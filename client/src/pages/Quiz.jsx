@@ -102,6 +102,7 @@ const Quiz = () => {
     };
 
     fetchLastQuizByUser(1);
+    fetchCards(['1']);
   }, []);
 
 
