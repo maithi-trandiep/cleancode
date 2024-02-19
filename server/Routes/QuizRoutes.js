@@ -1,6 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const quizRouter = express.Router();
 const bodyParser = require('body-parser');
+
 
 const {
     getAllQuiz,
@@ -8,14 +9,14 @@ const {
     createQuiz,
 } = require('../Controllers/QuizController');
 
-router.use(bodyParser.json());
+quizRouter.use(bodyParser.json());
 
-router.get('/quiz', (req, res) => {
+quizRouter.get('/quiz', (req, res) => {
     const quiz = getAllQuiz();
     res.status(200).json(quiz);
 });
 
-router.get('/users/:userId/lastQuiz', (req, res) => {
+quizRouter.get('/users/:userId/lastQuiz', (req, res) => {
     let user = req.params.userId;
     user = parseInt(user);
     const quiz = getQuizByUser(user);
@@ -27,7 +28,7 @@ router.get('/users/:userId/lastQuiz', (req, res) => {
     }
 });
 
-router.post('/quiz', (req, res) => {
+quizRouter.post('/quiz', (req, res) => {
     const newQuiz = req.body;
     if (createQuiz(newQuiz)) {
         res.status(201).json(newQuiz);
@@ -36,4 +37,4 @@ router.post('/quiz', (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = quizRouter ;

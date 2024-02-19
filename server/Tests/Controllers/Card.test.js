@@ -18,21 +18,21 @@ const mockData = {
    "question": "France",
    "answer": "Paris",
    "tag": "Europe",
-   "category": "FIRST",
+   "category": "1",
   },
   "2": {
    "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d1",
    "question": "Spain",
    "answer": "Madrid",
    "tag": "Europe",
-   "category": "FIRST"
+   "category": "1"
   },
   "3": {
    "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d2",
    "question": "Germany",
    "answer": "Berlin",
    "tag": "Europe",
-   "category": "FIRST"
+   "category": "1"
   },
  },
 };
@@ -64,7 +64,7 @@ describe('createCard', () => {
     "question": "France",
     "answer": "Paris",
     "tag": "Europe",
-    "category": "FIRST"
+    "category": "1"
   };
 
   createCard(newCard);

@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
 
-const { router } = require('./Routes/CardRoutes');
-const { quizRouter } = require('./Routes/QuizRoutes');
+const cardRouter  = require('./Routes/CardRoutes.js');
+const quizRouter = require('./Routes/QuizRoutes.js');
 const cors = require('cors');
 
 app.use(cors());
-app.use('/', router);
+app.use('/', cardRouter);
 app.use('/', quizRouter);
 
 // Démarrer le serveur
