@@ -1351,14 +1351,6 @@
       "answer": "Paramaribo",
       "tag": "South America",
       "category": "1"
-    },
-    "170": {
-      "user_id": 1,
-      "question": "Test",
-      "answer": "Test",
-      "tag": "Test",
-      "category": "1",
-      "id": 170
     }
   },
   "quiz": [
