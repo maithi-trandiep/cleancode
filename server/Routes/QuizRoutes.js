@@ -28,7 +28,6 @@ router.get('/users/:userId/lastQuiz', (req, res) => {
 });
 
 router.post('/quiz', (req, res) => {
-    console.log("req.body", req.body)
     const newQuiz = req.body;
     if (createQuiz(newQuiz)) {
         res.status(201).json(newQuiz);
