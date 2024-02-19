@@ -32,19 +32,29 @@ const getCardById = (id) => {
     return [];
 };
 
-//TODO: getCardByUser
+const getCardsByUser = (userId) => {
+    const cards = Object.values(readDataFromFile().cards);
+    return cards.filter(card => card.user_id === userId);
+}
 
 const getCardsByCategories = (categories) => {
     const cards = Object.values(readDataFromFile().cards);
     return cards.filter(card => parseInt(card.category) <= 7 && categories.includes(card.category));
 };
 
-
 const getCardsByTags = (tags) => {
     const cards = Object.values(readDataFromFile().cards);
     return cards.filter(card => tags.includes(card.tag));
 };
 
+const getTagsFromCards = () => {
+    const cards = getCardsByUser(1);
+    const tags = new Set();
+    for (const card of cards) {
+        tags.add(card.tag);
+    }
+    return Array.from(tags);
+}
 
 const createCard = (newCard) => {
     const data = readDataFromFile();
@@ -91,5 +101,7 @@ module.exports = {
     updateCard,
     deleteCard,
     getCardsByTags,
-    getCardsByCategories
+    getCardsByCategories,
+    getCardsByUser,
+    getTagsFromCards,
 };

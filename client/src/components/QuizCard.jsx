@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 import { useState } from "react";
 
-const QuizCard = ({ card, submitAnswer, answerValidated }) => {
+const QuizCard = ({ card, submitAnswer, answerValidated, isCorrect }) => {
   const [answer, setAnswer] = useState('');
 
   const handleChange = (e, name) => {
@@ -20,7 +20,7 @@ const QuizCard = ({ card, submitAnswer, answerValidated }) => {
   }
 
   useEffect(() => {
-    if(answerValidated) setAnswer('');
+    if (answerValidated) setAnswer('');
   }, [answerValidated]);
 
   return (
@@ -32,6 +32,9 @@ const QuizCard = ({ card, submitAnswer, answerValidated }) => {
         <Typography sx={{ mb: 1 }} color="text.secondary">
           {card.tag} / {card.category}
         </Typography>
+        { isCorrect == false && <Typography variant="body2">
+          Correct answer is: {card.answer}
+        </Typography> }
         <TextField id="standard-basic" label="Answer" variant="standard" disabled={answerValidated} value={answer} onChange={(e) => handleChange(e, 'question')} />
       </CardContent>
       <Button color="secondary" variant="outlined" size="small" onClick={handleAnswer}>Send</Button>

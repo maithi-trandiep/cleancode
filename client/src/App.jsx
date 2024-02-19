@@ -7,6 +7,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Quiz from "./pages/Quiz";
 import UserCard from "./pages/UserCard";
+import MyCards from "./pages/MyCards";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/card" element={<UserCard />} />
+            <Route path="/mycards" element={<MyCards />} />
           </Route>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />

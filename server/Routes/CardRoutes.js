@@ -8,8 +8,10 @@ const {
  createCard,
  updateCard,
  deleteCard,
+ getCardsByUser,
  getCardsByTags,
- getCardsByCategories
+ getCardsByCategories,
+ getTagsFromCards
 } = require('../Controllers/CardController');
 
 cardRouter.use(bodyParser.json());
@@ -80,6 +82,15 @@ cardRouter.delete('/cards/:id', (req, res) => {
  }
 });
 
+cardRouter.get('/user/:userId/cards', (req, res) => {
+   const userId = req.params.userId;
+   const cards = getCardsByUser(userId);
+   res.status(200).json(cards);
+});
 
+cardRouter.get('/tags', (req, res) => {
+   const tags = getTagsFromCards();
+   res.status(200).json(tags);
+});
 
 module.exports = cardRouter;

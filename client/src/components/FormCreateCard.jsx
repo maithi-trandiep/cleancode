@@ -11,7 +11,7 @@ import Alert from '@mui/material/Alert';
 
 const FormCreateCard = ({ onNewCard }) => {
     const [cards, setCards] = useState([]);
-    const [card, setCard] = useState({user_id: 1, question: '', answer: '', tag: '', category: 'FIRST'});
+    const [card, setCard] = useState({user_id: 1, question: '', answer: '', tag: '', category: '1'});
     const [open, setOpen] = useState(false);
 
     const handleSuccess = () => {
@@ -26,24 +26,23 @@ const FormCreateCard = ({ onNewCard }) => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        const newCard = await CardService.createCard(card);
-        if (newCard) {
-            console.log("newCard", newCard);
-            setCards([...cards, newCard]);
-            setCard({user_id: 1, question: '', answer: '', tag: '', category: 'FIRST'});
-            handleSuccess();
-            
-            onNewCard(newCard);
-        }
+      e.preventDefault();
+      const newCard = await CardService.createCard(card);
+      if (newCard) {
+        setCards([...cards, newCard]);
+        setCard({user_id: 1, question: '', answer: '', tag: '', category: '1'});
+        handleSuccess();
+        
+        onNewCard(newCard); 
+      }
     }
 
     const handleChange = (e, name) => {
-        const val = (e.target && e.target.value) || '';
-        let _card = { ...card };
-        _card[`${name}`] = val;
+      const val = (e.target && e.target.value) || '';
+      let _card = { ...card };
+      _card[`${name}`] = val;
 
-        setCard(_card);
+      setCard(_card);
     };
 
     return (

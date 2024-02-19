@@ -11,8 +11,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { AuthService } from '../service/AuthService';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthProvider';
-
+import useAuth from '../context/AuthProvider';
 
 export default function SignIn() {
   const { setAuth } = useAuth();

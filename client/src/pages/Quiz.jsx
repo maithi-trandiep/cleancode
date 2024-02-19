@@ -11,13 +11,13 @@ import { QuizService } from "../service/QuizService";
 const Quiz = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cards, setCards] = useState([]);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(null);
   const [hasAnwser, setHasAnwser] = useState(false);
   const [hasDone, setHasDone] = useState(false);
   const [answeredCards, setAnsweredCards] = useState([]);
 
   const handleNext = () => {
-    setIsCorrect(false);
+    setIsCorrect(null);
     setHasAnwser(false);
     setCurrentIndex((prevIndex) =>
       prevIndex === cards.length - 1 ? prevIndex : prevIndex + 1
@@ -65,28 +65,33 @@ const Quiz = () => {
     const fetchLastQuizByUser = async (userId) => {
       const response = await QuizService.getLastQuizByUser(userId); 
       if (response && response.dateQuiz) {
-        let previous = new Date(response.dateQuiz);
-        let diff = datediff(previous, new Date());
-        let newCategories = ['1'];
-        if (diff >= 1) {
-          newCategories.splice(0, 0, '2');
-        } 
-        if (diff >= 3) {
-          newCategories.splice(0, 0, '3');
-        } 
-        if (diff >= 7) {
-          newCategories.splice(0, 0, '4');
-        } 
-        if (diff >= 15) {
-          newCategories.splice(0, 0, '5');
-        } 
-        if (diff >= 31) {
-          newCategories.splice(0, 0, '6');
+        let formatDateQuiz = new Date(response.dateQuiz).toISOString().split('T')[0];
+        if (formatDateQuiz === new Date().toISOString().split('T')[0]) {
+          setHasDone(true);
+        } else {
+          let previous = new Date(response.dateQuiz);
+          let diff = datediff(previous, new Date());
+          let newCategories = ['1'];
+          if (diff >= 1) {
+            newCategories.splice(0, 0, '2');
+          } 
+          if (diff >= 3) {
+            newCategories.splice(0, 0, '3');
+          } 
+          if (diff >= 7) {
+            newCategories.splice(0, 0, '4');
+          } 
+          if (diff >= 15) {
+            newCategories.splice(0, 0, '5');
+          } 
+          if (diff >= 31) {
+            newCategories.splice(0, 0, '6');
+          }
+          if (diff >= 63) {
+            newCategories.splice(0, 0, '7');
+          } 
+          fetchCards(newCategories);
         }
-        if (diff >= 63) {
-          newCategories.splice(0, 0, '7');
-        } 
-        fetchCards(newCategories);
       }
     };
 
@@ -97,6 +102,7 @@ const Quiz = () => {
     };
 
     fetchLastQuizByUser(1);
+    fetchCards(['1']);
   }, []);
 
 
@@ -106,7 +112,7 @@ const Quiz = () => {
       { !hasDone &&
         <div>
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
-            {hasAnwser && (
+          {hasAnwser && (
               <Alert icon={<CheckIcon fontSize="inherit" />} severity={isCorrect ? "success" : "error"}>
                 {isCorrect ? "Correct answer" : "Wrong answer"}
               </Alert>
@@ -114,7 +120,7 @@ const Quiz = () => {
             <h1 style={{ flexBasis: "100%" }}>Quiz of the day</h1>
             
             { (cards.length > 0) ?
-                <QuizCard card={cards[currentIndex]} submitAnswer={handleSubmitAnswer} answerValidated={hasAnwser} />
+                <QuizCard card={cards[currentIndex]} submitAnswer={handleSubmitAnswer} answerValidated={hasAnwser} isCorrect={isCorrect} />
                 : <p>Loading...</p>
             }
           </div>
