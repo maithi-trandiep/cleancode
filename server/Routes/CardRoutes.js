@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const cardRouter = express.Router();
 const bodyParser = require('body-parser');
 
 const {
@@ -12,9 +12,9 @@ const {
  getCardsByCategories
 } = require('../Controllers/CardController');
 
-router.use(bodyParser.json());
+cardRouter.use(bodyParser.json());
 
-router.get('/cards', (req, res) => {
+cardRouter.get('/cards', (req, res) => {
  if (req.query && req.query.tags) {
   const tags = req.query.tags;
   const tagsArray = tags.split(',');
@@ -41,7 +41,7 @@ router.get('/cards', (req, res) => {
  }
 });
 
-router.get('/cards/:id', (req, res) => {
+cardRouter.get('/cards/:id', (req, res) => {
  const card = getCardById(req.params.id);
  if (card) {
   res.status(200).json(card);
@@ -50,7 +50,7 @@ router.get('/cards/:id', (req, res) => {
  }
 });
 
-router.post('/cards', (req, res) => {
+cardRouter.post('/cards', (req, res) => {
  const newCard = req.body;
  if (createCard(newCard)) {
   res.status(201).json(newCard);
@@ -59,7 +59,7 @@ router.post('/cards', (req, res) => {
  }
 });
 
-router.patch('/cards/:id', (req, res) => {
+cardRouter.patch('/cards/:id', (req, res) => {
  const id = req.params.id;
  const updatedCard = req.body;
  const success = updateCard(id, updatedCard);
@@ -70,7 +70,7 @@ router.patch('/cards/:id', (req, res) => {
  }
 });
 
-router.delete('/cards/:id', (req, res) => {
+cardRouter.delete('/cards/:id', (req, res) => {
  const id = req.params.id;
  const success = deleteCard(id);
  if (success) {
@@ -82,4 +82,4 @@ router.delete('/cards/:id', (req, res) => {
 
 
 
-module.exports = router;
+module.exports = cardRouter;

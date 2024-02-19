@@ -2,8 +2,6 @@ const request = require('supertest');
 const express = require('express');
 const app = express();
 
-
-// Importez ici les fonctions du contrôleur que vous souhaitez tester
 const {
  getAllCards,
  getCardById,
@@ -13,11 +11,10 @@ const {
  getCardsByTags
 } = require('server/Controllers/CardController.js');
 
-// Importez le routeur que vous souhaitez tester
 const cardRouter = require('server/Routes/CardRoutes.js');
 app.use('/', cardRouter);
 
-// Simulez les fonctions du contrôleur pour tester le routeur
+
 jest.mock('server/Controllers/CardController.js', () => ({
  getAllCards: jest.fn(),
  getCardById: jest.fn(),
@@ -27,7 +24,7 @@ jest.mock('server/Controllers/CardController.js', () => ({
  getCardsByTags: jest.fn(),
 }));
 
-// Testez la route GET /cards
+
 describe('GET /cards', () => {
  it('should return all cards when no tags are provided', async () => {
   const mockCards = {
@@ -83,8 +80,7 @@ describe('GET /cards', () => {
  });
 });
 
-// Vous pouvez écrire des tests similaires pour les autres routes (GET /cards/:id, POST /cards, PATCH /cards/:id, DELETE /cards/:id)
-// Testez la route GET /cards/:id
+
 describe('GET /cards/:id', () => {
  it('should return the card with the specified id', async () => {
   const mockCard = {
@@ -97,7 +93,7 @@ describe('GET /cards/:id', () => {
    }
   };
   getCardById.mockReturnValue(mockCard);
-
+  
   const response = await request(app).get('/cards/1');
 
   expect(response.status).toBe(200);
@@ -114,7 +110,7 @@ describe('GET /cards/:id', () => {
  });
 });
 
-// Testez la route POST /cards
+
 describe('POST /cards', () => {
  it('should create a new card', async () => {
   const newCard = { id: 1, title: 'New Card' };
@@ -140,7 +136,7 @@ describe('POST /cards', () => {
  });
 });
 
-// Testez la route PATCH /cards/:id
+
 describe('PATCH /cards/:id', () => {
  it('should update the card with the specified id', async () => {
   updateCard.mockReturnValue(true);
@@ -165,7 +161,7 @@ describe('PATCH /cards/:id', () => {
  });
 });
 
-// Testez la route DELETE /cards/:id
+
 describe('DELETE /cards/:id', () => {
  it('should delete the card with the specified id', async () => {
   deleteCard.mockReturnValue(true);
