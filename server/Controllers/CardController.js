@@ -35,7 +35,6 @@ const getCardById = (id) => {
 //TODO: getCardByUser
 
 const getCardsByCategories = (categories) => {
-    console.log("categories", categories);
     const cards = Object.values(readDataFromFile().cards);
     return cards.filter(card => parseInt(card.category) <= 7 && categories.includes(card.category));
 };
