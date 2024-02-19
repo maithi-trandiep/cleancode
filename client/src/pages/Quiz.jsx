@@ -65,28 +65,33 @@ const Quiz = () => {
     const fetchLastQuizByUser = async (userId) => {
       const response = await QuizService.getLastQuizByUser(userId); 
       if (response && response.dateQuiz) {
-        let previous = new Date(response.dateQuiz);
-        let diff = datediff(previous, new Date());
-        let newCategories = ['1'];
-        if (diff >= 1) {
-          newCategories.splice(0, 0, '2');
-        } 
-        if (diff >= 3) {
-          newCategories.splice(0, 0, '3');
-        } 
-        if (diff >= 7) {
-          newCategories.splice(0, 0, '4');
-        } 
-        if (diff >= 15) {
-          newCategories.splice(0, 0, '5');
-        } 
-        if (diff >= 31) {
-          newCategories.splice(0, 0, '6');
+        let formatDateQuiz = new Date(response.dateQuiz).toISOString().split('T')[0];
+        if (formatDateQuiz === new Date().toISOString().split('T')[0]) {
+          setHasDone(true);
+        } else {
+          let previous = new Date(response.dateQuiz);
+          let diff = datediff(previous, new Date());
+          let newCategories = ['1'];
+          if (diff >= 1) {
+            newCategories.splice(0, 0, '2');
+          } 
+          if (diff >= 3) {
+            newCategories.splice(0, 0, '3');
+          } 
+          if (diff >= 7) {
+            newCategories.splice(0, 0, '4');
+          } 
+          if (diff >= 15) {
+            newCategories.splice(0, 0, '5');
+          } 
+          if (diff >= 31) {
+            newCategories.splice(0, 0, '6');
+          }
+          if (diff >= 63) {
+            newCategories.splice(0, 0, '7');
+          } 
+          fetchCards(newCategories);
         }
-        if (diff >= 63) {
-          newCategories.splice(0, 0, '7');
-        } 
-        fetchCards(newCategories);
       }
     };
 
@@ -106,7 +111,7 @@ const Quiz = () => {
       { !hasDone &&
         <div>
           <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
-            {hasAnwser && (
+          {hasAnwser && (
               <Alert icon={<CheckIcon fontSize="inherit" />} severity={isCorrect ? "success" : "error"}>
                 {isCorrect ? "Correct answer" : "Wrong answer"}
               </Alert>

@@ -38,7 +38,7 @@
       "question": "Portugal",
       "answer": "Lisbon",
       "tag": "Europe",
-      "category": "1"
+      "category": "3"
     },
     "6": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d5",
@@ -46,7 +46,7 @@
       "question": "Netherlands",
       "answer": "Amsterdam",
       "tag": "Europe",
-      "category": "2"
+      "category": "3"
     },
     "7": {
       "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d6",
@@ -1416,6 +1416,21 @@
       "user_id": 1,
       "dateQuiz": "2024-02-17T21:46:40.006Z",
       "id": 11
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-18T11:48:27.149Z",
+      "id": 12
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-18T11:51:36.204Z",
+      "id": 13
+    },
+    {
+      "user_id": 1,
+      "dateQuiz": "2024-02-18T17:37:25.240Z",
+      "id": 14
     }
   ]
 }
