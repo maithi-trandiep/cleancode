@@ -15,15 +15,11 @@ const writeDataToFile = (data) => {
  fs.writeFileSync(FILE_PATH, JSON.stringify(data, null, 2));
 };
 
-const getAllQuiz = () => {
-    return Object.values(readDataFromFile().quiz);
-}
-
-const getQuizByUser = (user) => {
+const getQuizByUser = (userId) => {
     const quizData = readDataFromFile().quiz;
     const userQuizzes = [];
     if (quizData && Array.isArray(quizData)) {
-        return quizData.filter(quiz => quiz.user_id === user);
+        return quizData.filter(quiz => quiz.user_id === userId);
     }
     return userQuizzes;
 }
@@ -40,7 +36,6 @@ const createQuiz = (newQuiz) => {
 }
 
 module.exports = { 
-    getAllQuiz,
     getQuizByUser,
     createQuiz,
     readDataFromFile,
