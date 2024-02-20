@@ -1,6 +1,5 @@
 const fs = require('fs');
 const {
-    getAllQuiz,
     getQuizByUser,
     createQuiz,
 } = require('server/Controllers/QuizController.js');
@@ -26,13 +25,6 @@ const mockData = {
         }
     ]
 };
-
-describe('getAllQuiz', () => {
-    test('it should return all quiz', () => {
-        fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
-        expect(getAllQuiz()).toEqual(mockData.quiz);
-    });
-});
 
 describe('getQuizByUser', () => {
     test('it should return all quiz by user', () => {

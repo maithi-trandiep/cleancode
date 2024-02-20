@@ -9,6 +9,11 @@ const {
 } = require('server/Controllers/CardController.js');
 
 jest.mock('fs');
+jest.mock('uuid', () => ({
+  v4: jest.fn(),
+}));
+
+const uuidv4 = require('uuid').v4;
 
 // Mock data for testing
 const mockData = {
@@ -18,30 +23,30 @@ const mockData = {
    "question": "France",
    "answer": "Paris",
    "tag": "Europe",
-   "category": "1",
+   "category": "FIRST",
   },
   "2": {
    "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d1",
    "question": "Spain",
    "answer": "Madrid",
    "tag": "Europe",
-   "category": "1"
+   "category": "FIRST"
   },
   "3": {
    "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d2",
    "question": "Germany",
    "answer": "Berlin",
    "tag": "Europe",
-   "category": "1"
+   "category": "FIRST"
   },
  },
 };
 
 describe('getAllCards', () => {
- test('it should return all cards', () => {
-  fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
-  expect(getAllCards()).toEqual(mockData.cards);
- });
+  test('it should return all cards', () => {
+    fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
+    expect(getAllCards()).toEqual(Object.values(mockData.cards));
+  });
 });
 
 describe('getCardById', () => {
