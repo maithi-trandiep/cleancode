@@ -34,6 +34,11 @@ Pour démarrer l'application, exécutez la commande suivante :
 2. Dans le répertoire server du projet :
     ```
     node index.js
+    ````
+
+    ou
+    ```
+    nodemon index.js
     ```
 L'application devrait maintenant être accessible à l'adresse du `localhost`.
 

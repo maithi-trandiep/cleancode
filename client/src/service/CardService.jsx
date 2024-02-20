@@ -6,34 +6,46 @@ export const CardService = {
     return response.data;
   },
   async getAllCards() {
-    const response = await axios.get(`http://localhost:8080/cards`);
-    return response.data;
+    try {
+      const response = await axios.get(`http://localhost:8080/cards`);
+      return response.data;
+    } catch (error) {
+      return [];
+    }
   },
   async getCardById(id) {
     const response = await axios.get(`http://localhost:8080/cards/${id}`);
     return response.data;
   },
   async getQuizForDate(date) {
-    if (!date) {
-      const today = new Date();
-      date =
-        today.getFullYear() +
-        "-" +
-        (today.getMonth() + 1) +
-        "-" +
-        today.getDate();
+    try {
+      if (!date) {
+        const today = new Date();
+        date =
+          today.getFullYear() +
+          "-" +
+          (today.getMonth() + 1) +
+          "-" +
+          today.getDate();
+      }
+      const response = await axios.get(
+        `http://localhost:8080/cards/quizz?date=${date}`
+      );
+      return response.data;
+    } catch (error) {
+      return null;
     }
-    const response = await axios.get(
-      `http://localhost:8080/cards/quizz?date=${date}`
-    );
-    return response.data;
   },
   async answerCard(id, { isValid }) {
-    const response = await axios.patch(
-      `http://localhost:8080/cards/${id}/answer`,
-      { isValid }
-    );
-    return response.data;
+    try {
+      const response = await axios.patch(
+        `http://localhost:8080/cards/${id}/answer`,
+        { isValid }
+      );
+      return response.data;
+    } catch (error) {
+      return null;
+    }
   },
   async updateCard(id, card) {
     const response = await axios.patch(
@@ -47,9 +59,13 @@ export const CardService = {
     return response.data;
   },
   async getCardsByTags(tags) {
-    const response = await axios.get(
-      `http://localhost:8080/cards?tags=${tags}`
-    );
-    return response.data;
+    try {
+      const response = await axios.get(
+        `http://localhost:8080/cards?tags=${tags}`
+      );
+      return response.data;
+    } catch (error) {
+      return null;
+    }
   },
 };

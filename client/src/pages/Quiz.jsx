@@ -41,11 +41,11 @@ const Quiz = () => {
     }
   }
 
-  const daysAgo = n => {
-    let date = new Date();
-    date.setDate(date.getDate() - Math.abs(n));
-    return date;
-  };
+  // const daysAgo = n => {
+  //   let date = new Date();
+  //   date.setDate(date.getDate() - Math.abs(n));
+  //   return date;
+  // };
 
   const datediff = (first, second) => {        
     return Math.round((second - first) / (1000 * 60 * 60 * 24));
@@ -54,7 +54,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchLastQuizByUser = async (userId) => {
       const response = await QuizService.getQuizByUser(userId); 
-      if (response.length > 0) {
+      if (response && response.length > 0) {
         const sorted = response.sort((a, b) => new Date(b.dateQuiz) - new Date(a.dateQuiz));
         const lastQuiz = sorted[0];
         let formatDateQuiz = new Date(lastQuiz.dateQuiz)
@@ -62,19 +62,19 @@ const Quiz = () => {
           setDoneMessage("Quiz already done today");
           setHasDone(true);
         } else {
-          let previous = new Date(response.dateQuiz);
-          fetchCards(previous);
+          const dateQuizz = formatDateQuiz.getFullYear() + '-' + (formatDateQuiz.getMonth() + 1) + '-' + formatDateQuiz.getDate();
+          fetchCards(dateQuizz);
         }
+      } else {
+        const today = new Date() //daysAgo(1);
+        const dateQuizz = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        fetchCards(dateQuizz);
       }
-      const today = new Date() //daysAgo(1);
-      const dateQuizz = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-      fetchCards(dateQuizz);
     };
 
     const fetchCards = async (date) => {
       const response = await CardService.getQuizForDate(date);
-      const data = response;
-      setCards(data);
+      if (response) setCards(response);
     };
 
     fetchLastQuizByUser(1);

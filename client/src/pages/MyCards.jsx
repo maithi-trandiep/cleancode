@@ -18,7 +18,7 @@ const MyCards = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await CardService.getCardsByTags(tag);
-    setCards(response);
+    if(response) setCards(response);
   };
 
   useEffect(() => {
