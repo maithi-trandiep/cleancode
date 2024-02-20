@@ -8,7 +8,6 @@ import SignUp from "./pages/SignUp";
 import Quiz from "./pages/Quiz";
 import UserCard from "./pages/UserCard";
 import MyCards from "./pages/MyCards";
-import Notification from "./pages/Notification";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/card" element={<UserCard />} />
             <Route path="/mycards" element={<MyCards />} />
-            <Route path="/notification" element={<Notification />} />
           </Route>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />

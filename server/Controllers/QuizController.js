@@ -24,6 +24,14 @@ const getQuizByUser = (userId) => {
     return userQuizzes;
 }
 
+const getReminderByUser = (userId) => {
+    const reminderData = readDataFromFile().reminders;
+    if (reminderData && Array.isArray(reminderData)) {
+        return reminderData.filter(reminder => reminder.isActive && reminder.user_id === userId && new Date(reminder.dateReminder) > new Date());
+    }
+    return null;
+}
+
 const createQuiz = (newQuiz) => {
     const data = readDataFromFile();
     if (!data.quiz || !Array.isArray(data.quiz)) {
@@ -35,9 +43,22 @@ const createQuiz = (newQuiz) => {
     return newQuiz;
 }
 
+const createReminder = (newReminder) => {
+    const data = readDataFromFile();
+    if (!data.reminders || !Array.isArray(data.reminders)) {
+        data.reminders = [];
+    }
+    newReminder.id = data.reminders.length + 1;
+    data.reminders.push(newReminder);
+    writeDataToFile(data);
+    return newReminder;
+}
+
 module.exports = { 
     getQuizByUser,
+    getReminderByUser,
     createQuiz,
+    createReminder,
     readDataFromFile,
     writeDataToFile 
 }
