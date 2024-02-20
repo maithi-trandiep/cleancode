@@ -132,8 +132,10 @@ const getNewCategory = (category) => {
             return "SIXTH";
         case "SIXTH":
             return "SEVENTH";
-        default:
+        case "SEVENTH":
             return "DONE";
+        default:
+            return category;
     }
 }
 
