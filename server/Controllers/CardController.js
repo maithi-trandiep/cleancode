@@ -63,7 +63,6 @@ const createCard = (newCard) => {
     newCard = { ...newCard, id }; 
     data.cards[index] = newCard;
     writeDataToFile(data);
-    console.log(newCard);
     return newCard;
 };
 
