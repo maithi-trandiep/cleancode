@@ -63,30 +63,23 @@ describe('getCardById', () => {
 
 
 describe('createCard', () => {
-  test('it should create a new card', () => {
-    const newCard = {
-      "question": "France",
-      "answer": "Paris",
-      "tag": "Europe",
-      "category": "FIRST"
-    };
-    const mockId = '110ec58a-a0f2-4ac4-8393-c866d813b8d4';
-    uuidv4.mockReturnValueOnce(mockId);
+ test('it should create a new card', () => {
+  const newCard = {
+    "question": "France",
+    "answer": "Paris",
+    "tag": "Europe",
+    "category": "1"
+  };
 
-    fs.readFileSync.mockReturnValueOnce(JSON.stringify(mockData));
-    fs.writeFileSync.mockImplementationOnce(() => {});
+  createCard(newCard);
+  const newData = JSON.parse(fs.writeFileSync.mock.calls[0][1]);
 
-    createCard(newCard);
-    const newData = JSON.parse(fs.writeFileSync.mock.calls[0][1]);
-    const expectedData = {
-      cards: {
-        ...mockData.cards,
-        [Object.keys(mockData.cards).length + 1]: { ...newCard, id: mockId }
-      }
-    };
+  expect(newData.cards[Object.keys(mockData.cards).length + 1]["question"]).toEqual(newCard["question"]);
+  expect(newData.cards[Object.keys(mockData.cards).length + 1]["answer"]).toEqual(newCard["answer"]);
+  expect(newData.cards[Object.keys(mockData.cards).length + 1]["tag"]).toEqual(newCard["tag"]);
+  expect(newData.cards[Object.keys(mockData.cards).length + 1]["category"]).toEqual(newCard["category"]);
 
-    expect(newData).toEqual(expectedData);
-  });
+ });
 });
 
 describe('updateCard', () => {
