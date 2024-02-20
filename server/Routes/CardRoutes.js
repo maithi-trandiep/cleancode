@@ -26,7 +26,6 @@ cardRouter.get('/cards/quizz', (req, res) => {
 
 cardRouter.patch('/cards/:id/answer', (req, res) => {
    try {
-      console.log("answerCard", req.params.id, req.body.isValid);
       const cardId = req.params.id;
        const isValid = req.body.isValid;
       if (!cardId || isValid === undefined) {

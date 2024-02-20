@@ -17,7 +17,7 @@ const writeDataToFile = (data) => {
 
 
 const getAllCards = () => {
-    return readDataFromFile().cards;
+    return Object.values(readDataFromFile().cards);
 };
 
 const getCardById = (id) => {
@@ -44,7 +44,6 @@ const getQuizzCardsForDate = (date) => {
     let dateQuizz = new Date(date);
     let today = new Date();
     let diff = datediff(dateQuizz, today);
-    console.log("date diff", date, diff);
     let newCategories = ['FIRST'];
     if (diff >= 1) {
         newCategories.splice(0, 0, 'SECOND');
@@ -89,7 +88,6 @@ const createCard = (newCard) => {
     newCard = { ...newCard, id }; 
     data.cards[index] = newCard;
     writeDataToFile(data);
-    console.log(newCard);
     return newCard;
 };
 

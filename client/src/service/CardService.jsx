@@ -21,10 +21,6 @@ export const CardService = {
         const response = await axios.get(`http://localhost:8080/cards/quizz?date=${date}`);
         return response.data;
     },
-    async getCardsByTags(tags) {
-        const response = await axios.get(`http://localhost:8080/cards?tags=${tags}`)
-        return response.data;
-    },
     async answerCard(id, { isValid }) {
         const response = await axios.patch(`http://localhost:8080/cards/${id}/answer`,  { isValid });
         return response.data;

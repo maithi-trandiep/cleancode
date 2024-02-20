@@ -42,9 +42,9 @@ const Quiz = () => {
   }
 
   const daysAgo = n => {
-    let d = new Date();
-    d.setDate(d.getDate() - Math.abs(n));
-    return d;
+    let date = new Date();
+    date.setDate(date.getDate() - Math.abs(n));
+    return date;
   };
 
   const datediff = (first, second) => {        
@@ -61,10 +61,8 @@ const Quiz = () => {
         if (datediff(formatDateQuiz, new Date()) == 0){
           setDoneMessage("Quiz already done today");
           setHasDone(true);
-          console.log("Quiz already done today");
         } else {
           let previous = new Date(response.dateQuiz);
-          console.log(previous);
           fetchCards(previous);
         }
       }

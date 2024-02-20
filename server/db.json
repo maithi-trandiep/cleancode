@@ -1351,12 +1351,6 @@
       "answer": "Paramaribo",
       "tag": "South America",
       "category": "FIRST"
-    },
-    "170": {
-      "question": "What is pair programming ?",
-      "answer": "A practice to work in pair on same computer.",
-      "tag": "Teamwork",
-      "id": "e697d1da-a189-4924-b415-f65e6ca2a529"
     }
   }
 }
