@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const TagService = {
-    async getAllTags() {
-        const response = await axios.get(`http://localhost:8080/tags`);
+    async getCardsByTags(tags) {
+        const response = await axios.get(`http://localhost:8080/cards?tags=${tags}`)
         return response.data;
-    }
+    },
 };

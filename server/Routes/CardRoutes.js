@@ -8,13 +8,37 @@ const {
  createCard,
  updateCard,
  deleteCard,
+ answerCard,
  getCardsByUser,
  getCardsByTags,
- getCardsByCategories,
- getTagsFromCards
+ getTagsFromCards,
+ getQuizzCardsForDate
 } = require('../Controllers/CardController');
 
 cardRouter.use(bodyParser.json());
+
+
+cardRouter.get('/cards/quizz', (req, res) => {
+   const date = req.query.date;
+   const cards = getQuizzCardsForDate(date);
+   res.status(200).json(cards)
+});
+
+cardRouter.patch('/cards/:id/answer', (req, res) => {
+   try {
+      const cardId = req.params.id;
+       const isValid = req.body.isValid;
+      if (!cardId || isValid === undefined) {
+         res.status(400).json({ message: 'Bad request!' });
+      } else {
+         answerCard(cardId, isValid);
+         res.status(204).send();
+      }
+   } catch (error) {
+      console.log("error", error); 
+      res.status(404).json({ message: 'Card non trouvé' });
+   }
+});
 
 cardRouter.get('/cards', (req, res) => {
  if (req.query && req.query.tags) {
@@ -27,16 +51,6 @@ cardRouter.get('/cards', (req, res) => {
   } else {
    res.status(404).json({ message: 'Aucune fiche trouvée avec ces tags' });
   }
- } else if (req.query && req.query.categories) {
-    const categories = req.query.categories;
-    const categoriesArray = categories.split(',');
-    const matchingCards = getCardsByCategories(categoriesArray);
-    
-    if (matchingCards.length > 0) {
-     res.status(200).json(matchingCards);
-    } else {
-     res.status(404).json({ message: 'Aucune fiche trouvée avec ces catégories' });
-    }
  } else {
   const cards = getAllCards();
   res.status(200).json(cards);

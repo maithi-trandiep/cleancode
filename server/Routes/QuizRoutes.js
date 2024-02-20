@@ -4,37 +4,30 @@ const bodyParser = require('body-parser');
 
 
 const {
-    getAllQuiz,
     getQuizByUser,
     createQuiz,
 } = require('../Controllers/QuizController');
 
 quizRouter.use(bodyParser.json());
 
-quizRouter.get('/quiz', (req, res) => {
-    const quiz = getAllQuiz();
-    res.status(200).json(quiz);
-});
-
-quizRouter.get('/users/:userId/lastQuiz', (req, res) => {
-    let user = req.params.userId;
-    user = parseInt(user);
-    const quiz = getQuizByUser(user);
+quizRouter.get('/quiz/:userId', (req, res) => {
+    const userId = req.params.userId;
+    const quiz = getQuizByUser(parseInt(userId));
     if (quiz) {
-        quiz.sort((a, b) => new Date(b.dateQuiz) - new Date(a.dateQuiz));
-        res.status(200).json(quiz[0]);
+        res.status(200).json(quiz);
     } else {
         res.status(404).json({ message: 'Quiz non trouvé' });
     }
-});
+})
 
 quizRouter.post('/quiz', (req, res) => {
     const newQuiz = req.body;
-    if (createQuiz(newQuiz)) {
-        res.status(201).json(newQuiz);
+    if (!newQuiz || !newQuiz.user_id) {
+        res.status(400).json({ message: 'Bad request!' });
     } else {
-        res.status(400).json({ message: 'Erreur lors de la création du quiz' });
+        const quiz = createQuiz(newQuiz);
+        res.status(201).json(quiz);
     }
-});
+})
 
 module.exports = quizRouter ;
