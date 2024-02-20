@@ -9,6 +9,11 @@ const {
 } = require('server/Controllers/CardController.js');
 
 jest.mock('fs');
+jest.mock('uuid', () => ({
+  v4: jest.fn(),
+}));
+
+const uuidv4 = require('uuid').v4;
 
 // Mock data for testing
 const mockData = {
@@ -38,10 +43,10 @@ const mockData = {
 };
 
 describe('getAllCards', () => {
- test('it should return all cards', () => {
-  fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
-  expect(getAllCards()).toEqual(mockData.cards);
- });
+  test('it should return all cards', () => {
+    fs.readFileSync.mockReturnValue(JSON.stringify(mockData));
+    expect(getAllCards()).toEqual(Object.values(mockData.cards));
+  });
 });
 
 describe('getCardById', () => {
@@ -58,26 +63,30 @@ describe('getCardById', () => {
 
 
 describe('createCard', () => {
- test('it should create a new card', () => {
-  const newCard = {
-    "id": "110ec58a-a0f2-4ac4-8393-c866d813b8d4",
-    "question": "France",
-    "answer": "Paris",
-    "tag": "Europe",
-    "category": "FIRST"
-  };
+  test('it should create a new card', () => {
+    const newCard = {
+      "question": "France",
+      "answer": "Paris",
+      "tag": "Europe",
+      "category": "FIRST"
+    };
+    const mockId = '110ec58a-a0f2-4ac4-8393-c866d813b8d4';
+    uuidv4.mockReturnValueOnce(mockId);
 
-  createCard(newCard);
-  const newData = JSON.parse(fs.writeFileSync.mock.calls[0][1]);
-  const expectedData = {
-   cards: {
-    ...mockData.cards,
-    [Object.keys(mockData.cards).length + 1]: newCard
-   }
-  };
+    fs.readFileSync.mockReturnValueOnce(JSON.stringify(mockData));
+    fs.writeFileSync.mockImplementationOnce(() => {});
 
-  expect(newData).toEqual(expectedData);
- });
+    createCard(newCard);
+    const newData = JSON.parse(fs.writeFileSync.mock.calls[0][1]);
+    const expectedData = {
+      cards: {
+        ...mockData.cards,
+        [Object.keys(mockData.cards).length + 1]: { ...newCard, id: mockId }
+      }
+    };
+
+    expect(newData).toEqual(expectedData);
+  });
 });
 
 describe('updateCard', () => {
